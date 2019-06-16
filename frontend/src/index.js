@@ -11,7 +11,9 @@ import MainRouter from './MainRouter';
 
 import './style/globalStyle.css';
 
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core';
+import { ThemeProvider } from '@material-ui/styles';
+import { createMuiTheme } from '@material-ui/core/styles';
+
 const theme = createMuiTheme({
     palette: {
         //type: 'light', // Switching the dark mode on is a single property value change.
@@ -28,11 +30,11 @@ const theme = createMuiTheme({
 
 ReactDOM.render(
     <Provider store={store}>
-        <MuiThemeProvider theme={theme}> 
+        <ThemeProvider theme={theme}> 
             <ConnectedRouter history={history}>
                 <MainRouter />
             </ConnectedRouter>
-        </MuiThemeProvider>
+        </ThemeProvider>
     </Provider>,
     document.getElementById('root')
 );

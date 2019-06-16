@@ -64,7 +64,7 @@ class SidebarMenu extends React.Component {
                     styles={{ sidebar: { background: 'black', height: '1000px', position: 'fixed',}, root: {height: '0px'} }}
                     pullRight={true}
                 >
-                    
+                    null
                 </Sidebar>  
             </>
         );
