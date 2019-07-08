@@ -1,19 +1,16 @@
 import React from 'react';
-
 import { Route, Switch } from 'react-router-dom';
-import { Home } from './routes/Home/Home';
+
+import Home from './routes/Home/Home';
 /* import { noRouteRenderer } from './routes/NoRoute/noRouteRenderer'; */
 
-class MainRouter extends React.Component {
+const MainRouter = () => {
+    return (
+        <Switch>
+            <Route path="/" component={Home} />
+            {/* <Route component={noRouteRenderer} /> */}
+        </Switch>
+    );
+};
 
-    render() {
-        return (
-            <Switch>
-                <Route path="/" component={Home} />
-                {/* <Route component={noRouteRenderer} /> */}
-            </Switch>
-        );
-    }
-}
-
-export default (MainRouter);
+export default MainRouter;

@@ -2,8 +2,8 @@ import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
 /* import { restaurantDetailsRenderer } from './RestaurantDetails/restaurantDetailsRenderer'; */
-import { ContactContainer } from './Contact/ContactContainer';
-import Diagnoses from './Services/Diagnoses';
+import Contact from './Contact/Contact';
+import Diagnoses from './Diagnoses/Diagnoses';
 
 class HomeRouter extends React.Component {
     render() {
@@ -11,7 +11,7 @@ class HomeRouter extends React.Component {
             <Switch>
                 <Route exact={true} path={'/diagnoses'} component={Diagnoses} />
                 <Route path='diagnoses/:diagnosisId' component={() => <div>Single diagnosis</div>} />
-                <Route path={'/about'} component={ContactContainer} />
+                <Route path={'/about'} component={Contact} />
                 <Redirect from='/' to='/diagnoses' />      
             </Switch>
         );

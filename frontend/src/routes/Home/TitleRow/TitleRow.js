@@ -1,7 +1,6 @@
 import React from 'react';
 import { withStyles } from '@material-ui/styles';
 
-import woman from './BeautifulWoman.jpg';
 import SpreadMenu from './SpreadMenu';
 import { SidebarMenu } from './SidebarMenu';
 

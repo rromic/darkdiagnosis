@@ -31,37 +31,29 @@ const containerStyleHdOverrides = {
 const containerStyleHd = Object.assign({}, containerStyleFullHd, containerStyleHdOverrides);
  */
 
-class Home extends React.Component {
+const Home = () => {
+    return (
+        <>
+            <TitleRowContainer />
+            <div style={{
+                /* position: 'relative',
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'center', */
+                //backgroundColor: 'whitesmoke'
+                display: 'flex',
+                alignItems: 'center',
+                width: '95%',
+                maxWidth: '1270px',
+                margin: 'auto',
+                marginTop: '1rem',
+                flexDirection: 'column',
+            }}>
+                <HomeRouter />
+            </div>
+            {/* <div style={{width: '100%', backgroundColor: 'black', color: 'white'}}>Footer</div> */}
+        </>
+    );
+};
 
-    componentDidMount () {
-        // this.props.checkAuthenticationAndLoadUserData();
-    }
-
-    render() {
-
-        return (
-            <>
-                <TitleRowContainer />
-                <div style={{
-                    /* position: 'relative',
-                    display: 'flex',
-                    flexDirection: 'row',
-                    justifyContent: 'center', */
-                    //backgroundColor: 'whitesmoke'
-                    display: 'flex',
-                    alignItems: 'center',
-                    width: '95%',
-                    maxWidth: '1270px',
-                    margin: 'auto',
-                    marginTop: '1rem',
-                    flexDirection: 'column',
-                }}>
-                    <HomeRouter />
-                </div>
-                {/* <div style={{width: '100%', backgroundColor: 'black', color: 'white'}}>Footer</div> */}
-            </>
-        );
-    }
-}
-
-export { Home };
+export default Home;
