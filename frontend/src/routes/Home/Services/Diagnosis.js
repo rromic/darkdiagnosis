@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import { makeStyles } from '@material-ui/styles';
+import { NavLink } from 'react-router-dom';
 
 const useStyles = makeStyles(theme => {
 
@@ -40,7 +41,7 @@ const Diagnosis = ({diagnosisData}) => {
     );
 
     return (
-        <div className={classes.outer}>
+        <NavLink className={classes.outer} to='diagnoses/123'>
             <div 
                 onClick={() => {setShowDescription(!showDescription);}}
                 className={classes.inner}
@@ -49,7 +50,7 @@ const Diagnosis = ({diagnosisData}) => {
                 <img src={diagnosisData.imageUrl} width='100%' height='100%' style={{borderRadius: '10px'}}/>
             </div>
             {showDescription && descriptionComponent}
-        </div>
+        </NavLink>
     );
 };
 

@@ -1,17 +1,18 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 
 /* import { restaurantDetailsRenderer } from './RestaurantDetails/restaurantDetailsRenderer'; */
 import { ContactContainer } from './Contact/ContactContainer';
-import { ServicesContainer } from './Services/ServicesContainer';
+import Diagnoses from './Services/Diagnoses';
 
 class HomeRouter extends React.Component {
     render() {
         return (
             <Switch>
-                <Route exact={true} path={'/'} component={ServicesContainer} />
-                {/* <Route path={'/restaurants/:restaurantName'} component={restaurantDetailsRenderer}/> */}
+                <Route exact={true} path={'/diagnoses'} component={Diagnoses} />
+                <Route path='diagnoses/:diagnosisId' component={() => <div>Single diagnosis</div>} />
                 <Route path={'/about'} component={ContactContainer} />
+                <Redirect from='/' to='/diagnoses' />      
             </Switch>
         );
     }

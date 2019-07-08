@@ -35,7 +35,7 @@ class SidebarMenu extends React.Component {
                 textAlign: 'center'
             }}>
                 <div 
-                    style={{margin: '3rem', cursor: currentRoute === '/' ? 'default' : 'pointer', fontWeight: currentRoute === '/' && 'bold',}}
+                    style={{margin: '3rem', cursor: currentRoute === '/diagnoses' ? 'default' : 'pointer', fontWeight: currentRoute === '/diagnoses' && 'bold',}}
                     onClick={this.contactClickHandler}
                 >
                     Diagnoses

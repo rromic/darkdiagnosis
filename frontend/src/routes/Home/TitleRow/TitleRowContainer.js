@@ -13,13 +13,13 @@ const mapDispatchToProps = (dispatch) => ({
         dispatch(loginButtonHandler());
     }, */
     logoClickedHandler: () => {
-        dispatch(push('/'));
+        dispatch(push('/diagnoses'));
     },
     servicesClickHandler: () => {
         dispatch(push('/about'));
     },
     contactClickHandler: () => {
-        dispatch(push('/'));
+        dispatch(push('/diagnoses'));
     },
 });
 

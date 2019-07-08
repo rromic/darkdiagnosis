@@ -21,7 +21,7 @@ class SpreadMenu extends React.Component {
             <>  
                 <Link 
                     onClick={this.contactClickHandler}
-                    style={{marginLeft: '2rem', fontSize: '1.2rem', cursor: currentRoute === '/' ? 'default' : 'pointer', color: 'white', fontWeight: currentRoute === '/' && 'bold',}}
+                    style={{marginLeft: '2rem', fontSize: '1.2rem', cursor: currentRoute === '/diagnoses' ? 'default' : 'pointer', color: 'white', fontWeight: currentRoute === '/' && 'bold',}}
                     underline='none'
                 >
                     Diagnoses

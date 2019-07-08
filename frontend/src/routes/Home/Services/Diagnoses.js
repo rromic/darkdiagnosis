@@ -9,34 +9,25 @@ import diagnosisUrl5 from './diagnosis5.jpg';
 import diagnosisUrl6 from './diagnosis6.jpg';
 
 
-class Services extends React.Component {
+const Diagnoses = () => {
 
-    componentWillMount() {
-        // this.props.loadRouteData();
-    }
-
-    render() {
-
-        const {/* listOfRestaurants, openOnly, area, onRestaurantClickHandler */} = this.props;
-
-        return (
-            <div style={{
-                width: '100%',
-                display: 'flex',
-                flexDirection: 'row',
-                flexWrap: 'wrap',
-                alignItems: 'center',
-                justifyContent: 'flex-start',
-            }}>
-                {diagnosisDataList.map((diagnosisData, index) => (
-                    <Diagnosis key={index} diagnosisData={diagnosisData} />
-                ))}
-            </div>
-        );
-    }
+    return (
+        <div style={{
+            width: '100%',
+            display: 'flex',
+            flexDirection: 'row',
+            flexWrap: 'wrap',
+            alignItems: 'center',
+            justifyContent: 'flex-start',
+        }}>
+            {diagnosisDataList.map((diagnosisData, index) => (
+                <Diagnosis key={index} diagnosisData={diagnosisData} />
+            ))}
+        </div>
+    );
 }
 
-export {Services};
+export default Diagnoses;
 
 
 const diagnosisDataList = [

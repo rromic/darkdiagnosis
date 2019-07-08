@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Route, Switch } from 'react-router-dom';
-import { HomeContainer } from './routes/Home/HomeContainer';
+import { Home } from './routes/Home/Home';
 /* import { noRouteRenderer } from './routes/NoRoute/noRouteRenderer'; */
 
 class MainRouter extends React.Component {
@@ -9,7 +9,7 @@ class MainRouter extends React.Component {
     render() {
         return (
             <Switch>
-                <Route path="/" component={HomeContainer} />
+                <Route path="/" component={Home} />
                 {/* <Route component={noRouteRenderer} /> */}
             </Switch>
         );
