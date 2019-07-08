@@ -3,6 +3,7 @@ import reduxThunk from 'redux-thunk';
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import { createBrowserHistory } from 'history';
 import { connectRouter, routerMiddleware } from 'connected-react-router';
+import diagnosesReducer from './diagnoses';
 
 //import { loginReducer } from './login';
 
@@ -11,7 +12,8 @@ const history = createBrowserHistory();
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const reducer = combineReducers({
-    router: connectRouter(history)
+    router: connectRouter(history),
+    diagnosesData: diagnosesReducer
 });
 
 const store = createStore(
