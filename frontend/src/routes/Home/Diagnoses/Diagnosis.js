@@ -43,7 +43,12 @@ const Diagnosis = ({diagnosisData}) => {
                 className={classes.inner}
                 style={{margin: 'auto', display: 'flex', justifyContent: 'center'}}
             >
-                <img src={diagnosisData.imageUrl} width='100%' height='100%' style={{borderRadius: '10px'}}/>
+                <img
+                    title={diagnosisData.name}
+                    src={diagnosisData.imageUrl}
+                    width='100%'
+                    height='100%'
+                    style={{borderRadius: '10px'}}/>
             </div>
         </div>
     );

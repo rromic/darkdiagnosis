@@ -1,13 +1,20 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
+import {useSelector} from 'react-redux';
 
 import Sidebar from 'react-sidebar';
 import MenuIcon from '@material-ui/icons/Menu';
 import SidebarMenuContent from './SidebarMenuContent';
 
 const SidebarMenu = () => {
-
     const [sidebarOpen, setSidebarOpen] = useState(false);
 
+    /////////hack to trigger sidebare close on route change///////////
+    const route = useSelector(state => state.router.location.pathname);
+    useEffect(() => {
+        setSidebarOpen(false);
+    }, [route]);
+    /////////////////////////////////////////////////////////////////
+    
     return (
         <>
             <div 
