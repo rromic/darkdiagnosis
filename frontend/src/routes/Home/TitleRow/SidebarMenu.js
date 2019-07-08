@@ -2,6 +2,7 @@ import React from 'react';
 
 import Sidebar from 'react-sidebar';
 import MenuIcon from '@material-ui/icons/Menu';
+import { NavLink } from 'react-router-dom';
 
 class SidebarMenu extends React.Component {
 
@@ -12,7 +13,7 @@ class SidebarMenu extends React.Component {
         this.setState({ sidebarOpen: open });
     }
 
-    servicesClickHandler = () => {
+    /* servicesClickHandler = () => {
         window.scrollTo(0, window);
         this.onSetSidebarOpen(false);
         this.props.servicesClickHandler();
@@ -22,30 +23,34 @@ class SidebarMenu extends React.Component {
         window.scrollTo(0, window);
         this.onSetSidebarOpen(false);
         this.props.contactClickHandler();
-    }
+    } */
 
     render() {
-        const {currentRoute,} = this.props;
 
         const sidebarContent = (
             <div style={{
                 width: '170px',
-                backgroundColor: 'black',
-                color: 'white',
-                textAlign: 'center'
+                textAlign: 'center',
+                display: 'flex',
+                flexDirection: 'column',
+                paddingTop: '1rem'
             }}>
-                <div 
-                    style={{margin: '3rem', cursor: currentRoute === '/diagnoses' ? 'default' : 'pointer', fontWeight: currentRoute === '/diagnoses' && 'bold',}}
-                    onClick={this.contactClickHandler}
+                <NavLink 
+                    to='/diagnoses'
+                    exact={true}
+                    style={{margin: '1rem 3rem', color: 'white', textDecoration: 'none', fontSize: '1.2rem', }}
+                    activeStyle={{cursor: 'default', fontWeight: 'bold',}}
                 >
                     Diagnoses
-                </div>
-                <div 
-                    style={{margin: '3rem', cursor: currentRoute === '/about' ? 'default' : 'pointer', fontWeight: currentRoute === '/about' && 'bold',}}
-                    onClick={this.servicesClickHandler}
+                </NavLink>
+                <NavLink 
+                    to='/about'
+                    exact={true}
+                    style={{margin: '1rem 3rem', color: 'white', textDecoration: 'none', fontSize: '1.2rem', }}
+                    activeStyle={{cursor: 'default', fontWeight: 'bold',}}
                 >
                     About
-                </div>
+                </NavLink>
             </div>
         );
 

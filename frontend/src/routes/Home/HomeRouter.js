@@ -10,9 +10,9 @@ class HomeRouter extends React.Component {
         return (
             <Switch>
                 <Route exact={true} path={'/diagnoses'} component={Diagnoses} />
-                <Route path='diagnoses/:diagnosisId' component={() => <div>Single diagnosis</div>} />
+                <Route path='/diagnoses/:diagnosisId' component={() => <div>Single diagnosis</div>} />
                 <Route path={'/about'} component={Contact} />
-                <Redirect from='/' to='/diagnoses' />      
+                <Redirect to='/diagnoses' />      
             </Switch>
         );
     }

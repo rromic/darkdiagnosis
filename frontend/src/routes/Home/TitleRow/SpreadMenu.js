@@ -1,10 +1,12 @@
 import React from 'react';
-import Link from '@material-ui/core/Link';
+import { NavLink } from 'react-router-dom';
 
+const basicLinkStyle = {marginLeft: '2rem', fontSize: '1.2rem', color: 'white', textDecoration: 'none',};
+const activeLinkStyle = {cursor: 'default', fontWeight: 'bold',};
 
-class SpreadMenu extends React.Component {
+const SpreadMenu= () => {
 
-    servicesClickHandler = () => {
+/*     servicesClickHandler = () => {
         window.scrollTo(0, window);
         this.props.servicesClickHandler();
     }
@@ -12,32 +14,30 @@ class SpreadMenu extends React.Component {
     contactClickHandler = () => {
         window.scrollTo(0, window);
         this.props.contactClickHandler();
-    }
+    } */
 
-    render() {
-        const {currentRoute} = this.props;
+    return (
+        <>  
+            <NavLink 
+                to='/diagnoses'
+                exact={true}
+                style={basicLinkStyle}
+                activeStyle={activeLinkStyle}
+            >
+                Diagnoses
+            </NavLink>
+        
+            <NavLink 
+                to='/about'
+                exact={true}
+                style={basicLinkStyle}
+                activeStyle={activeLinkStyle}
+            >
+                About
+            </NavLink>
+        </>
+    );
+};
 
-        return (
-            <>  
-                <Link 
-                    onClick={this.contactClickHandler}
-                    style={{marginLeft: '2rem', fontSize: '1.2rem', cursor: currentRoute === '/diagnoses' ? 'default' : 'pointer', color: 'white', fontWeight: currentRoute === '/' && 'bold',}}
-                    underline='none'
-                >
-                    Diagnoses
-                </Link>
-            
-                <Link 
-                    onClick={this.servicesClickHandler}
-                    style={{marginLeft: '2rem', fontSize: '1.2rem', cursor: currentRoute === '/about' ? 'default' : 'pointer', color: 'white', fontWeight: currentRoute === '/about' && 'bold',}}
-                    underline='none'
-                >
-                    About
-                </Link>
-            </>
-        );
-    }
-}
-
-export default (SpreadMenu);
+export default SpreadMenu;
 
