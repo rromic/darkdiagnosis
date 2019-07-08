@@ -2,7 +2,7 @@ import React from 'react';
 import { withStyles } from '@material-ui/styles';
 
 import SpreadMenu from './SpreadMenu';
-import { SidebarMenu } from './SidebarMenu';
+import SidebarMenu from './SidebarMenu';
 
 const styles = {
     titleRow: {
