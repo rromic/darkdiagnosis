@@ -1,7 +1,7 @@
 import React from 'react';
 /* import MediaQuery from 'react-responsive'; */
 
-import { TitleRowContainer } from './TitleRow/TitleRowContainer';
+import TitleRow from './TitleRow/TitleRow';
 import { HomeRouter } from './HomeRouter';
 //import { CartModalContainer } from './CartModal/CartModalContainer';
 /* import { RecentOrderNotificationContainer } from './RecentOrderNotification/RecentOrderNotificationContainer'; */
@@ -34,7 +34,7 @@ const containerStyleHd = Object.assign({}, containerStyleFullHd, containerStyleH
 const Home = () => {
     return (
         <>
-            <TitleRowContainer />
+            <TitleRow />
             <div style={{
                 /* position: 'relative',
                 display: 'flex',

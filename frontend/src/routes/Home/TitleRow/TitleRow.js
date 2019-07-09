@@ -1,5 +1,6 @@
 import React from 'react';
 import { withStyles } from '@material-ui/styles';
+import {Link} from 'react-router-dom';
 
 import SpreadMenu from './SpreadMenu';
 import SidebarMenu from './SidebarMenu';
@@ -44,8 +45,10 @@ const styles = {
     },
     title: {
         fontSize: '1.7rem',
-        fontWeight: 'bold'
-        //cursor: 'pointer',
+        fontWeight: 'bold',
+        cursor: 'pointer',
+        color: 'white',
+        textDecoration: 'none',
     },
     /* '@media (min-width: 600px)': {
         
@@ -76,46 +79,34 @@ const styles = {
 };
 
 
-class TitleRow extends React.Component {
+const TitleRow = ({servicesClickHandler, contactClickHandler, logoClickedHandler, classes, currentRoute}) => {
 
-    render() {
-        const {servicesClickHandler, contactClickHandler, logoClickedHandler, classes, currentRoute} = this.props;
+    return (
+        <>
+            <div className={classes.titleRow}>
+                <Link
+                    to='/diagnoses'
+                    className={classes.title}
+                >
+                    Dark Diagnosis
+                </Link>
 
-        return (
-            <>
-                <div className={classes.titleRow}>
-                    <div
-                        /* onClick={logoClickedHandler} */
-                        className={classes.title}
-                    >
-                        Dark Diagnosis
-                    </div>
-
-                    <div className={classes.mdMenu}>
-                        <SpreadMenu
-                            servicesClickHandler={servicesClickHandler}
-                            contactClickHandler={contactClickHandler}
-                            currentRoute={currentRoute}
-                        />
-                    </div>
-
-                    <div className={classes.xsMenu}>
-                        <SidebarMenu 
-                            servicesClickHandler={servicesClickHandler}
-                            contactClickHandler={contactClickHandler}
-                            currentRoute={currentRoute}
-                        />
-                    </div>
+                <div className={classes.mdMenu}>
+                    <SpreadMenu />
                 </div>
 
-                <div className={classes.spacer} />
-                {/* <div className={classes.image}>
-                    <img src={woman} style={{width: '100%'}}/> 
-                </div> */}
-            </>
-        );
-    }
-}
+                <div className={classes.xsMenu}>
+                    <SidebarMenu />
+                </div>
+            </div>
+
+            <div className={classes.spacer} />
+            {/* <div className={classes.image}>
+                <img src={woman} style={{width: '100%'}}/> 
+            </div> */}
+        </>
+    );
+};
 
 export default withStyles(styles)(TitleRow);
 

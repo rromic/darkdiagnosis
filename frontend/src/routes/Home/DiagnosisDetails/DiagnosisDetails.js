@@ -1,27 +1,25 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/styles';
 import { useSelector } from 'react-redux';
+import Grid from '@material-ui/core/Grid';
+
 
 const useStyles = makeStyles(theme => {
 
     console.log(theme);
     return ({
-        outer: {
-            margin: '2.5rem 0.41% 1rem',
+        /* outer: {
+            margin: '2.5rem',
             width: '99%',
+        }, */
+        imageWrapper: {
+            width: '100%',
         },
-        inner: {
-            cursor: 'pointer',
-        },
-        [theme.breakpoints.up('sm')/* '@media (min-width: 600px)' */]: {
-            outer: {
-                width: '49.1%'
-            },
-        },
-        [theme.breakpoints.up('md')/* '@media (min-width: 960px)' */]: {
-            outer: {
-                width: '32.5%'
-            },
+        description: {
+            width: '100%',
+            margin: '2rem',
+            display: 'flex',
+            flexDirection: 'column',
         },
     });
 });
@@ -36,22 +34,21 @@ const DiagnosisDetails = ({match}) => {
         return (<div>This diagnosis does not exist :(</div>);
     }
     const descriptionComponent = (
-        <div>
+        <div className={classes.description}>
             <div style={{fontWeight: 'bold', fontSize: '1.4rem', margin: '0.5rem 0rem'}}>{diagnosisData.name}</div>
-            {diagnosisData.description}
+            <div>{diagnosisData.description}</div>
         </div>
     );
 
     return (
-        <div className={classes.outer} >
-            <div
-                className={classes.inner}
-                style={{margin: 'auto',/*  display: 'flex', */ justifyContent: 'center'}}
-            >
-                <img src={diagnosisData.imageUrl} width='100%' height='100%' style={{borderRadius: '10px'}}/>
+        <Grid container>
+            <Grid item xs={12} sm={6}>
+                <img src={diagnosisData.imageUrl} width='100%' height='100%' style={{borderRadius: '5%'}}/>
+            </Grid>
+            <Grid item xs={12} sm={6}>
                 {descriptionComponent}
-            </div>
-        </div>
+            </Grid>
+        </Grid>
     );
 };
 
