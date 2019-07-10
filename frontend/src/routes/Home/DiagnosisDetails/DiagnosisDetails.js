@@ -19,6 +19,11 @@ const useStyles = makeStyles(theme => {
             margin: '2rem',
             display: 'flex',
             flexDirection: 'column',
+        },        
+        [theme.breakpoints.up('sm')/* '@media (min-width: 600px)' */]: {
+            description: {
+                marginTop: '0rem'
+            },
         },
     });
 });

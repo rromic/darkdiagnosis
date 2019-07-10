@@ -38,7 +38,7 @@ const diagnosesData = [
         name: 'Alice in Wonderland Syndrome',
         description: `Alice in Wonderland syndrome, also known as Todd's syndrome is a neurological condition in which visual perception is damaged. This state causes that objects appear in different size than normal, closer or further away than they are. Patients can experience feelings that body parts are larger or smaller and symptoms of derealisation and depersonalisation. It is speculated that a writer, Lewis Carroll, described his own symptoms in the book ' Alice's Adventures in Wonderland', where the main character felt same perceptual alterations.`,
         imageUrl: aliceInWonderland
-    },,
+    },
     {
         id: `Ondine's curse`,
         name: `Ondine's curse`,
@@ -62,39 +62,46 @@ const diagnosesData = [
         name: 'Ehlers Danlos Syndrome',
         description: `Gary Turner is the current holder of Guiness World Record for the stretchiest skin. He suffers from an extreme form of Ehlers Danlos syndrome. Ehlers Danlos syndromes are a group of genetic disorders that affect the collagen in every part of the body. Symptoms include hyperelastic skin, hypermobile joints, fragile blood vessels and abnormal scar formation. Complications can vary from mild, like loose joints, to severe like aortic dissection which can be fatal. Why the Zebra??`,
         imageUrl: ehlers
-    },{
+    },
+    {
         id: `Stoneman's disease`,
         name: `Stoneman's disease`,
         description: `Fibrodysplasio ossificans progressiva is a genetic condition in which muscles, ligaments and tendons are progressively replaced by bones. This disease, also known as Stoneman's disease, typically affects upper body skeleton and progresses downwards, but any minor muscle trauma can be a trigger for painful ossification. Abnormal extraskeletal ossifications in limb joints, jaw, and rib cage are limiting normal everyday physiological actions such as walking, speaking, eating and breathing. Unfortunately, surgical removal of an extraskeletal bone leads to uncontrolable formation of a new bone.`,
         imageUrl: stonemansDisease
-    },{
+    },
+    {
         id: 'Lighting strike',
         name: 'Lighting strike',
         description: `Have you ever notice the skin of a lightning strike victim. These tree-like patterns are also known as Lichtenberg figures and appear when high voltage electrical discharges pass along the surface of insulating materials.`,
         imageUrl: lightingStrike
-    },{
+    },
+    {
         id: 'Vanishing twin syndrome',
         name: 'Vanishing twin syndrome',
         description: `Vanishing twin syndrome is a phenomenon in which one embryo disappears after documented fetal heart activity in multiple pregnancies. The disappearance usually occurs/happens in early pregnancy, as a consequence of fetal death (the cause is unknown) and the absorption of fetal tissue by the placenta, the other twin or mother. When fetal death occurs after the first trimester, a fetus papyraceus can be formed (a "mummified" and compressed fetus). Vanishing twin syndrome occurs in 20-30% off all multifetal pregnancies and is often asymptomatic. Before high quality ultrasound exams in early pregnancy the syndrome was less frequent and often unnoticed.
 
         Which anomaly from previous posts can you notice here?`,
         imageUrl: vanishingTwin
-    },{
+    },
+    {
         id: 'Narcolepsy',
         name: 'Narcolepsy',
         description: `Narcolepsy is a neurological sleep disorder and a subtype of central disorders of hypersomnolence. Hypersomnolence is excessive daytime sleepiness despite sufficient night-time sleep. According to DSM-5,narcolepsy is defined as recurrent episodes of an irrepressible need to sleep, lapses into sleep, or napping occuring within the same day. This should happen at least three times per week, with a period of three consecutive months. One of three minor criteria should also be met: catalepsy (sudden and uncontrollable muscle paralisys with a loss of contact with the environment), hypocretin protein deficiency and REM latency. Narcolepsy is confirmed by polysomnography followed by a multiple sleep latency test.`,
         imageUrl: narcolepsy
-    },{
+    },
+    {
         id: 'Diogenes syndrome',
         name: 'Diogenes syndrome',
         description: `Diogenes syndrome is a psychiatric syndrome named after Diogenes, the ancient Greek philosopher who showed a lack of shame and lived in severe domestic squalor. The syndrome is characterized by the inability to ask for medical or social help, a pathological relationship to the body, society and objects. The last criterion may overlap with the hoarding disorder. The hoarding disorder is a subtype in obsessive compulsive spectrum disorders (OCD). It is characterized by difficulty to discard or part with possessions, usually objects. The result is the accumulation of objects and the congestion of living areas.`,
         imageUrl: diogenesSyndrome
-    },{
+    },
+    {
         id: 'Bubble boy',
         name: 'Bubble boy',
         description: `Severe combined immunodeficiencies are a group of inherited disorders in which the differentiation and development of T and B lymphocytes are impaired. There are 8 subtypes based on phenotype and inheritance. Early infections, clinically manifested by diarrhea, pneumonitis, and failure to thrive, are often fatal. David Vetter, affectionately known as ‘The Boy in the Bubble’, was born in 1971 with severe combined immunodeficiency. Doctors failed to find a match for a blood marrow transplant, which resulted in keeping David inside a plastic sterile bubble to wait for a cure. Unfortunately, in 1984, he succumbed to the consequences of Burkitt’s lymphoma caused by an EBV infection, previously undetected, due to a bone marrow transplant. Aside from David, there have been several more cases of ‘bubble babies’, however David being the only one to endure 12 years in this environment. In the US, newborn screening programs have been widely accepted. Gene therapy, although still under clinical trial, could potentially be the cure to this disorder.`,
         imageUrl: bubbleBoy
-    },{
+    },
+    {
         id: 'Blood type change',
         name: 'Blood type change',
         description: `ABO blood group antigenes are the most immunogenic antigenes determining a blood type. They are found on the surface of red blood cells. Although it was believed that a blood type is consistent (permanent) throughout a human’s life, it was reported that in both hematological and solid malignancies (e.g. bladder or lung carcinoma), a blood group can be changed. The loss of ABO antigenes is common in patients with leukemia, in which ABH antigenes are supressed or dimnisihed during the acute leukemic phase. Except blood type change in malignant conditions, research has identified enzymes which can convert other blood types to the “universal“ type O.
