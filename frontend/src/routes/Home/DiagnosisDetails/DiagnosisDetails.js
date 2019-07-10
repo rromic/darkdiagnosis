@@ -16,7 +16,6 @@ const useStyles = makeStyles(theme => {
             width: '100%',
         },
         description: {
-            width: '100%',
             margin: '2rem',
             display: 'flex',
             flexDirection: 'column',
@@ -26,7 +25,7 @@ const useStyles = makeStyles(theme => {
 
 const DiagnosisDetails = ({match}) => {
     const classes = useStyles();
-    const diagnosisId = Number.parseInt(match.params.diagnosisId);
+    const diagnosisId = match.params.diagnosisId;
     const diagnosesData = useSelector(state => state.diagnosesData);
     const diagnosisData = diagnosesData.find(diagnosis => diagnosis.id === diagnosisId);
 
