@@ -34,7 +34,9 @@ const createSwaggerValidateMiddleware = () => {
 
 const createStaticCacheMiddleware = () => {
     return staticCache(path.resolve('..', 'frontend', 'dist'), {
-        maxAge: 60
+        maxAge: 60,
+        preload: true,
+        dynamic: true,
     });
 };
 
