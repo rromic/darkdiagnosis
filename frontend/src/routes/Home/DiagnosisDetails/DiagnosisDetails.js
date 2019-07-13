@@ -43,7 +43,7 @@ const DiagnosisDetails = ({match}) => {
             <div>{diagnosisData.description}</div>
             <div style={{margin: '1rem 0rem', fontWeight: 'bold', fontSize: '1.2rem'}}>Links</div>
             {diagnosisData.links.map(link => (
-                <a style={{marginBottom: '0.5rem', wordBreak: 'break-word', }} href={link}>{link}</a>
+                <a style={{marginBottom: '0.5rem', wordBreak: 'break-word', }} href={link} target='_blank'>{link}</a>
             ))}
         </div>
     );
