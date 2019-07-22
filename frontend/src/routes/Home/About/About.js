@@ -1,10 +1,32 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
+import { makeStyles } from '@material-ui/styles';
 
-const Contact = () => {
+const useStyles = makeStyles(theme => {
+    return ({
+        outer: {
+            textAlign: 'center',
+            width: '700px',
+            maxWidth: '100%',
+            backgroundColor: 'white',
+            borderRadius: '30px',
+            padding: '0rem 1rem',
+            margin: '2rem 0rem',
+        },   
+        [theme.breakpoints.up('sm')/* '@media (min-width: 600px)' */]: {
+            outer: {
+                padding: '0px 50px',   
+                margin: '5rem 0rem',             
+            },
+        },
+    });
+});
+
+const About = () => {
+    const classes = useStyles();
 
     return (
-        <Grid container style={{textAlign: 'center', width: '700px', maxWidth: '100%'}}>
+        <Grid container className={classes.outer}>
             <Grid item xs={12} md={12} style={{textAlign: 'center',}}>
                 <div style={{marginTop: '2rem', marginBottom: '4rem'}}>
                     <div style={{fontSize: '1.4rem', marginBottom: '1rem', fontWeight: 'bold'}}>About Dark Diagnosis</div>
@@ -69,4 +91,4 @@ const Contact = () => {
     );
 };
 
-export default Contact;
+export default About;

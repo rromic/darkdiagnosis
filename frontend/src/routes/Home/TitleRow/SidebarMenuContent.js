@@ -13,7 +13,7 @@ const SidebarMenuContent = () => {
             <NavLink
                 to='/diagnoses'
                 exact={true}
-                style={{ margin: '1rem 3rem', color: 'white', textDecoration: 'none', fontSize: '1.2rem', }}
+                style={{ margin: '1rem 3rem', color: '#FFFFFE', textDecoration: 'none', fontSize: '1.3rem', }}
                 activeStyle={{ cursor: 'default', fontWeight: 'bold', }}
             >
                 Diagnoses
@@ -21,7 +21,7 @@ const SidebarMenuContent = () => {
             <NavLink
                 to='/about'
                 exact={true}
-                style={{ margin: '1rem 3rem', color: 'white', textDecoration: 'none', fontSize: '1.2rem', }}
+                style={{ margin: '1rem 3rem', color: '#FFFFFE', textDecoration: 'none', fontSize: '1.3rem', }}
                 activeStyle={{ cursor: 'default', fontWeight: 'bold', }}
             >
                 About

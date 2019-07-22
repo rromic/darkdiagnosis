@@ -1,58 +1,48 @@
 import React from 'react';
-/* import MediaQuery from 'react-responsive'; */
 
 import TitleRow from './TitleRow/TitleRow';
 import { HomeRouter } from './HomeRouter';
-//import { CartModalContainer } from './CartModal/CartModalContainer';
-/* import { RecentOrderNotificationContainer } from './RecentOrderNotification/RecentOrderNotificationContainer'; */
+import backgroundPattern from './backgroundPattern.jpg';
+import { makeStyles } from '@material-ui/styles';
 
-/* 
-const containerWidth = 950;
+const useStyles = makeStyles(theme => {
 
-const containerStyleFullHd = {
-    position: 'relative',
-    width: containerWidth + 'px',
-    minWidth: containerWidth + 'px',
-    minHeight: '100vh',
-    backgroundColor: '#f5f5f5',
-    margin: 'auto',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'start',
-    alignItems: 'center'
-};
-
-const containerStyleHdOverrides = {
-    width: (containerWidth * 0.87) + 'px',
-    minWidth: (containerWidth * 0.87) + 'px',
-    fontSize: '0.87rem',
-};
-
-const containerStyleHd = Object.assign({}, containerStyleFullHd, containerStyleHdOverrides);
- */
+    return ({
+        outer: {
+            backgroundImage: `url(${backgroundPattern})`,
+            backgroundSize: '350px',
+            minHeight: '100%',
+            position: 'absolute',
+            width: '100%',
+            /* display: 'flex',
+            flexDirection: 'column', */
+        },   
+        [theme.breakpoints.up('sm')/* '@media (min-width: 600px)' */]: {
+            /* outer: {
+                marginTop: '5rem',
+            }, */
+        },
+    });
+});
 
 const Home = () => {
+    const classes = useStyles();
+
     return (
-        <>
+        <div className={classes.outer}>
             <TitleRow />
             <div style={{
-                /* position: 'relative',
-                display: 'flex',
-                flexDirection: 'row',
-                justifyContent: 'center', */
-                //backgroundColor: 'whitesmoke'
                 display: 'flex',
                 alignItems: 'center',
                 width: '95%',
                 maxWidth: '1270px',
                 margin: 'auto',
-                marginTop: '1rem',
                 flexDirection: 'column',
             }}>
                 <HomeRouter />
             </div>
             {/* <div style={{width: '100%', backgroundColor: 'black', color: 'white'}}>Footer</div> */}
-        </>
+        </div>
     );
 };
 

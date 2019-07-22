@@ -18,7 +18,7 @@ const styles = {
         justifyContent: 'space-between',
         alignItems: 'center',
         /* borderBottom: '1px solid black', */
-        color: 'white',
+        color: '#FFFFFE',
         opacity: '0.95',
         height: '5rem',
         boxSizing: 'border-box',
@@ -44,10 +44,10 @@ const styles = {
     xsMenu: {
     },
     title: {
+        color: '#FFFFFE',
         fontSize: '1.7rem',
         fontWeight: 'bold',
         cursor: 'pointer',
-        color: 'white',
         textDecoration: 'none',
     },
     /* '@media (min-width: 600px)': {
