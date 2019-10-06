@@ -1,6 +1,8 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/styles';
+import MailOutlineIcon from '@material-ui/icons/MailOutline';
+import FacebookIcon from '@material-ui/icons/Facebook';
 
 const useStyles = makeStyles(theme => {
     return ({
@@ -70,8 +72,14 @@ const About = () => {
                         flexDirection: 'column',
                         justifyContent: 'space-between',
                     }}>
-                        <div style={{marginBottom: '1rem'}}>Facebook: <a href='https://www.facebook.com/darkdiagnosis/'>facebook.com/darkdiagnosis</a></div>
-                        <div style={{}}>e-mail: darkdiagnosis1@gmail.com</div>
+                        <div style={{marginBottom: '1rem', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
+                            <FacebookIcon />
+                            <a href='https://www.facebook.com/darkdiagnosis/'>facebook.com/darkdiagnosis</a>
+                        </div>
+                        <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
+                            <MailOutlineIcon style={{margin: '0.5rem'}}/>
+                            <span>darkdiagnosis1@gmail.com</span>
+                        </div>
                     </div>
                 </div>
             </Grid>
