@@ -36,10 +36,10 @@ const About = () => {
                         justifyContent: 'space-between',
                     }}>
                         <div style={{marginBottom: '1rem', textAlign: 'justify'}}>
-                            {`Dark diagnosis is a project which combines illustrations with medical descriptions of diseases. The idea is to raise awareness and inform a wider audience about rare diagnoses and also to promote and support science.`}
+                            {`Dark diagnosis is a project which combines illustrations with medical descriptions of diseases. The idea is to raise awareness and inform a wider audience about rare diagnoses, and also to promote and support science.`}
                         </div>
                         <div style={{marginBottom: '1rem', textAlign: 'justify'}}>
-                            {`Below every illustration and description you can find evidence based medical articles. In addition, every topic is connected to the respective Croatian association that helps patients with the described disease.`}
+                            {`Below every illustration and description you can find links to evidence based medical articles. In addition, every topic is connected to the respective Croatian association that helps patients with the described disease.`}
                         </div>
                         <div style={{marginBottom: '1rem', textAlign: 'justify'}}>
                             {`As a future goal of the project we would like to establish a charity art exhibition with the availability of merchandise for the donation to humanitarian causes.`}
