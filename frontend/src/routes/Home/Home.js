@@ -2,14 +2,14 @@ import React from 'react';
 
 import TitleRow from './TitleRow/TitleRow';
 import { HomeRouter } from './HomeRouter';
-import backgroundPattern from './backgroundPattern.jpg';
+/* import backgroundPattern from './backgroundPattern.jpg'; */
 import { makeStyles } from '@material-ui/styles';
 
 const useStyles = makeStyles(theme => {
 
     return ({
         outer: {
-            backgroundImage: `url(${backgroundPattern})`,
+            /* backgroundImage: `url(${backgroundPattern})`, */
             backgroundSize: '350px',
             minHeight: '100%',
             position: 'absolute',

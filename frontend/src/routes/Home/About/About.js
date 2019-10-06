@@ -35,11 +35,14 @@ const About = () => {
                         flexDirection: 'column',
                         justifyContent: 'space-between',
                     }}>
-                        <div style={{marginBottom: '1rem', textAlign: 'left'}}>
-                            {`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`}
+                        <div style={{marginBottom: '1rem', textAlign: 'justify'}}>
+                            {`Dark diagnosis is a project which combines illustrations with medical descriptions of diseases. The idea is to raise awareness and inform a wider audience about rare diagnoses.`}
                         </div>
-                        <div style={{marginBottom: '1rem', textAlign: 'left'}}>
-                            {`It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.`}
+                        <div style={{marginBottom: '1rem', textAlign: 'justify'}}>
+                            {`Below every illustration and description you can find evidence based medical articles with the purpose of promoting and supporting science. In addition, every topic is connected to the respective Croatian association helping patients with the described disease.`}
+                        </div>
+                        <div style={{marginBottom: '1rem', textAlign: 'justify'}}>
+                            {`As a future goal of the project we would like to establish a charity art exhibition with the availability of merchandise for the donation to humanitarian causes.`}
                         </div>
                     </div>
                 </div>
