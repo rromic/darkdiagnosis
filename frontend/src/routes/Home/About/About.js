@@ -3,6 +3,7 @@ import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/styles';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import FacebookIcon from '@material-ui/icons/Facebook';
+import InstagramIcon from '@material-ui/icons/Instagram';
 
 const useStyles = makeStyles(theme => {
     return ({
@@ -20,6 +21,13 @@ const useStyles = makeStyles(theme => {
                 padding: '0px 50px',   
                 margin: '5rem 0rem',             
             },
+        },
+        contactItems: {
+            marginBottom: '1rem',
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'center',
         },
     });
 });
@@ -72,12 +80,16 @@ const About = () => {
                         flexDirection: 'column',
                         justifyContent: 'space-between',
                     }}>
-                        <div style={{marginBottom: '1rem', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
-                            <FacebookIcon />
+                        <div className={classes.contactItems}>
+                            <FacebookIcon style={{margin: '0.5rem', color: '#673ab7'}} />
                             <a href='https://www.facebook.com/darkdiagnosis/'>facebook.com/darkdiagnosis</a>
                         </div>
-                        <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
-                            <MailOutlineIcon style={{margin: '0.5rem'}}/>
+                        <div className={classes.contactItems}>
+                            <InstagramIcon style={{margin: '0.5rem'}} />
+                            <a href='https://www.instagram.com/darkdiagnosis/'>instagram.com/darkdiagnosis</a>
+                        </div>
+                        <div className={classes.contactItems}>
+                            <MailOutlineIcon style={{margin: '0.5rem'}} />
                             <span>darkdiagnosis1@gmail.com</span>
                         </div>
                     </div>
