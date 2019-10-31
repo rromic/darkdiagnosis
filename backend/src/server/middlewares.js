@@ -33,7 +33,7 @@ const createSwaggerValidateMiddleware = () => {
 
 
 const createStaticCacheMiddleware = () => {
-    return staticCache(path.resolve('..', 'frontend', 'dist'), {
+    return staticCache(path.resolve('..', 'frontend', 'build'), {
         maxAge: 60,
         preload: true,
         dynamic: true,
@@ -41,7 +41,7 @@ const createStaticCacheMiddleware = () => {
 };
 
 const serveIndexMiddleware = async (ctx) => {
-    await send(ctx, 'index.html', {root: path.resolve('../frontend/dist')});
+    await send(ctx, 'index.html', {root: path.resolve('../frontend/build')});
 };
 
 
