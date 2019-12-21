@@ -72,9 +72,9 @@ const styles = {
             justifyContent: 'right',
             alignItems: 'center'
         },
-        xsMenu: {
+        /* xsMenu: {
             display: 'none',
-        },
+        }, */
     },
 };
 
@@ -91,9 +91,9 @@ const TitleRow = ({servicesClickHandler, contactClickHandler, logoClickedHandler
                     Dark Diagnosis
                 </Link>
 
-                <div className={classes.mdMenu}>
+                {/* <div className={classes.mdMenu}>
                     <SpreadMenu />
-                </div>
+                </div> */}
 
                 <div className={classes.xsMenu}>
                     <SidebarMenu />

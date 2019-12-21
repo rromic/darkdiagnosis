@@ -1,39 +1,75 @@
-import React, {useState, useEffect} from 'react';
-import {useSelector} from 'react-redux';
-
-import Sidebar from 'react-sidebar';
+import React, { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 import MenuIcon from '@material-ui/icons/Menu';
-import SidebarMenuContent from './SidebarMenuContent';
+import { Drawer } from '@material-ui/core';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
+import { makeStyles } from '@material-ui/styles';
+
+const useStyles = makeStyles({
+  link: {
+    textDecoration: 'none',
+  },
+  sidebarPaper: {
+    width: '170px',
+    backgroundColor: 'black',
+  },
+  listItem: {
+    textAlign: 'center',
+    color: 'white',
+    textDecoration: 'none',
+    fontSize: '1.3rem',
+  },
+});
 
 const SidebarMenu = () => {
-    const [sidebarOpen, setSidebarOpen] = useState(false);
+  const classes = useStyles();
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
-    /////////hack to trigger sidebare close on route change///////////
-    const route = useSelector(state => state.router.location.pathname);
-    useEffect(() => {
-        setSidebarOpen(false);
-    }, [route]);
-    /////////////////////////////////////////////////////////////////
-    
-    return (
-        <>
-            <div 
-                onClick={() => setSidebarOpen(true)}
-                style={{cursor: 'pointer', display: 'flex', marginLeft: '2rem',}}
-            >
-                <MenuIcon />
-            </div>
-            <Sidebar
-                sidebar={<SidebarMenuContent />}
-                open={sidebarOpen}
-                onSetOpen={setSidebarOpen}
-                styles={{ sidebar: { background: 'black', height: '1000px', position: 'fixed',}, root: {height: '0px'} }}
-                pullRight={true}
-            >
-                null
-            </Sidebar>  
-        </>
-    );
+  /////////hack to trigger sidebare close on route change///////////
+  const route = useSelector(state => state.router.location.pathname);
+  useEffect(() => {
+    setSidebarOpen(false);
+  }, [route]);
+  /////////////////////////////////////////////////////////////////
+
+  return (
+    <>
+      <div
+        style={{ cursor: 'pointer', display: 'flex', marginLeft: '2rem', }}
+      >
+        <MenuIcon onClick={() => setSidebarOpen(true)} />
+      </div>
+      <Drawer
+        anchor="right"
+        open={sidebarOpen}
+        onClose={() => setSidebarOpen(false)}
+        classes={{ paper: classes.sidebarPaper }}
+      >
+        <List
+        >
+          <NavLink to='/diagnoses' exact className={classes.link}
+            activeStyle={{ cursor: 'default', fontWeight: 'bold', }}
+          >
+            <ListItem className={classes.listItem}>
+              {/* <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon> */}
+              <ListItemText disableTypography primary={'Diagnoses'} />
+            </ListItem>
+          </NavLink>
+          <NavLink to='/about' exact className={classes.link}
+            activeStyle={{ cursor: 'default', fontWeight: 'bold', }}
+          >
+            <ListItem className={classes.listItem}>
+              {/* <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon> */}
+              <ListItemText disableTypography primary={'About'} />
+            </ListItem>
+          </NavLink>
+        </List>
+      </Drawer>
+    </>
+  );
 };
 
 export default SidebarMenu;

@@ -1,12 +1,11 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/styles';
-import { NavLink } from 'react-router-dom';
 import { push } from 'connected-react-router';
 import { useDispatch } from 'react-redux';
 
 const useStyles = makeStyles(theme => {
 
-    console.log(theme);
+    /* console.log(theme); */
     return ({
         outer: {
             margin: '2.5rem 0.41% 1rem',
@@ -44,6 +43,7 @@ const Diagnosis = ({diagnosisData}) => {
                 style={{margin: 'auto', display: 'flex', justifyContent: 'center'}}
             >
                 <img
+                    alt={diagnosisData.name}
                     title={diagnosisData.name}
                     src={diagnosisData.imageUrl}
                     width='100%'
