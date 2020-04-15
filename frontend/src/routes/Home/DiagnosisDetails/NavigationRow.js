@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => {
       flexDirection: 'row',
       justifyContent: 'space-between',
       alignItems: 'center',
-      margin: '0rem 1rem 1rem 1rem',
+      margin: '0.5rem 1rem 1rem 1rem',
     },
     [theme.breakpoints.up('sm')/* '@media (min-width: 600px)' */]: {
       outer: {
@@ -27,13 +27,9 @@ const NavigationRow = ({ currentIndex, diagnosesData }) => {
 
   return (
     <div className={classes.outer}>
-      {previousIndex > 0 ? <DiagnosisThumbnail diagnosisData={diagnosesData[previousIndex]} mini={true} />
-        : <div />
-      }
-      <NavLink to='/about'><HomeIcon style={{width: '2rem', height: '2rem'}}/></NavLink>
-      {nextIndex < diagnosesData.length - 1 ? <DiagnosisThumbnail diagnosisData={diagnosesData[nextIndex]} mini={true} />
-        : <div />
-      }
+      <DiagnosisThumbnail diagnosisData={diagnosesData[previousIndex]} mini={true} />
+      <NavLink to='/about'><HomeIcon style={{ width: '2rem', height: '2rem' }} /></NavLink>
+      <DiagnosisThumbnail diagnosisData={diagnosesData[nextIndex]} mini={true} />
     </div>
   );
 };

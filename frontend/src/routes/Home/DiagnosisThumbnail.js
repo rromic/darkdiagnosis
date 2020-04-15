@@ -29,6 +29,9 @@ const Diagnosis = ({ diagnosisData, mini }) => {
   const classes = useStyles();
   const dispatch = useDispatch();
 
+  if (diagnosisData === undefined) {
+    return (<div className={classes.outer + (mini ? ' ' + classes.mini : '')} />)
+  }
   return (
     <div
       className={classes.outer + (mini ? ' ' + classes.mini : '')}
