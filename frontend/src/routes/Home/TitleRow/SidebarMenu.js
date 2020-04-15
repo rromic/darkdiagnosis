@@ -50,20 +50,20 @@ const SidebarMenu = () => {
       >
         <List
         >
-          <NavLink to='/diagnoses' exact className={classes.link}
-            activeStyle={{ cursor: 'default', fontWeight: 'bold', }}
-          >
-            <ListItem className={classes.listItem}>
-              {/* <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon> */}
-              <ListItemText disableTypography primary={'Diagnoses'} />
-            </ListItem>
-          </NavLink>
           <NavLink to='/about' exact className={classes.link}
             activeStyle={{ cursor: 'default', fontWeight: 'bold', }}
           >
             <ListItem className={classes.listItem}>
               {/* <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon> */}
-              <ListItemText disableTypography primary={'About'} />
+              <ListItemText disableTypography primary={'Home'} />
+            </ListItem>
+          </NavLink>
+          <NavLink to='/diagnoses' exact className={classes.link}
+            activeStyle={{ cursor: 'default', fontWeight: 'bold', }}
+          >
+            <ListItem className={classes.listItem}>
+              {/* <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon> */}
+              <ListItemText disableTypography primary={'Gallery'} />
             </ListItem>
           </NavLink>
         </List>
