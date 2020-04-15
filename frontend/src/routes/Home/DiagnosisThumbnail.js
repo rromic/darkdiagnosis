@@ -1,9 +1,9 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/styles';
+import { push } from 'connected-react-router';
+import { useDispatch } from 'react-redux';
 
 const useStyles = makeStyles(theme => {
-
-  /* console.log(theme); */
   return ({
     outer: {
       margin: '0.5rem 0.41% 0.5rem',
@@ -12,30 +12,33 @@ const useStyles = makeStyles(theme => {
     inner: {
     },
     [theme.breakpoints.up('sm')/* '@media (min-width: 600px)' */]: {
-      outer: {
-        margin: '0.5rem 0.41% 0.5rem',
-        width: '19%',
+      mini: {
+        width: '60px',
       },
     },
     [theme.breakpoints.up('md')/* '@media (min-width: 960px)' */]: {
-      outer: {
+      /* outer: {
         margin: '0.5rem 0.41% 0.5rem',
-        width: '9%',
-      },
+        width: '19%',
+      }, */
     },
   });
 });
 
-const Diagnosis = ({ diagnosisData }) => {
+const Diagnosis = ({ diagnosisData, mini }) => {
   const classes = useStyles();
+  const dispatch = useDispatch();
 
   return (
     <div
-      className={classes.outer}
+      className={classes.outer + (mini ? ' ' + classes.mini : '')}
+      onClick={
+        () => { dispatch(push('/diagnoses/' + diagnosisData.id)); }
+      }
     >
       <div
         className={classes.inner}
-        style={{ margin: 'auto', display: 'flex', justifyContent: 'center' }}
+        style={{ margin: 'auto', display: 'flex', justifyContent: 'center', cursor: 'pointer' }}
       >
         <img
           alt={diagnosisData.name}

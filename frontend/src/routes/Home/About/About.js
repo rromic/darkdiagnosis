@@ -4,9 +4,8 @@ import { makeStyles } from '@material-ui/styles';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
-import { useSelector, useDispatch } from 'react-redux';
-import DiagnosisThumbnail from './DiagnosisThumbnail';
-import { push } from 'connected-react-router';
+import { useSelector, } from 'react-redux';
+import DiagnosisThumbnail from '../DiagnosisThumbnail';
 
 const useStyles = makeStyles(theme => {
     return ({
@@ -20,7 +19,7 @@ const useStyles = makeStyles(theme => {
             margin: '1rem 0rem',
         },
         contactItems: {
-            marginBottom: '0.5rem',
+            marginBottom: '0rem',
             display: 'flex',
             flexDirection: 'row',
             alignItems: 'center',
@@ -38,34 +37,12 @@ const useStyles = makeStyles(theme => {
 const About = () => {
     const classes = useStyles();
     const diagnosesData = useSelector(state => state.diagnosesData);
-    const dispatch = useDispatch();
 
     return (
         <Grid container className={classes.outer}>
-            <Grid item xs={12} md={12} style={{ textAlign: 'center' }}>
-                <div style={{ marginTop: '1rem', marginBottom: '3rem' }}>
-                    <div style={{ fontSize: '1.4rem', marginBottom: '2rem', fontWeight: 'bold' }}>Gallery</div>
-                    <div
-                        style={{
-                            display: 'flex',
-                            flexDirection: 'row',
-                            flexWrap: 'wrap',
-                            cursor: 'pointer',
-                        }}
-                        onClick={
-                            () => { dispatch(push('/diagnoses')); }
-                        }
-                    >
-                        {diagnosesData.map(diagnosisData => (
-                            <DiagnosisThumbnail key={diagnosisData.id} diagnosisData={diagnosisData} />
-                        ))}
-                    </div>
-                </div>
-            </Grid>
-
             <Grid item xs={12} md={12} style={{ textAlign: 'center', }}>
-                <div style={{ marginTop: '1rem', marginBottom: '3rem' }}>
-                    <div style={{ fontSize: '1.4rem', marginBottom: '2rem', fontWeight: 'bold' }}>About the project</div>
+                <div style={{ marginTop: '1rem', marginBottom: '1.5rem' }}>
+                    <div style={{ fontSize: '1.4rem', marginBottom: '1.5rem', fontWeight: 'bold' }}>About the project</div>
                     <div style={{
                         display: 'flex',
                         flexDirection: 'column',
@@ -85,8 +62,27 @@ const About = () => {
             </Grid>
 
             <Grid item xs={12} md={12} style={{ textAlign: 'center' }}>
+                <div style={{ marginTop: '0rem', marginBottom: '4rem' }}>
+                    <div style={{ fontSize: '1.4rem', marginBottom: '1.5rem', fontWeight: 'bold' }}>Gallery</div>
+                    <div
+                        style={{
+                            display: 'flex',
+                            flexDirection: 'row',
+                            flexWrap: 'wrap',
+                        }}
+                    >
+                        {diagnosesData.map(diagnosisData => (
+                            <DiagnosisThumbnail key={diagnosisData.id} diagnosisData={diagnosisData} />
+                        ))}
+                    </div>
+                </div>
+            </Grid>
+
+
+
+            <Grid item xs={12} md={12} style={{ textAlign: 'center' }}>
                 <div style={{ marginBottom: '2rem' }}>
-                    <div style={{ fontSize: '1.4rem', marginBottom: '1.5rem', fontWeight: 'bold' }}>Contact us</div>
+                    <div style={{ fontSize: '1.4rem', marginBottom: '1rem', fontWeight: 'bold' }}>Contact us</div>
                     <div style={{
                         display: 'flex',
                         flexDirection: 'column',

@@ -2,7 +2,7 @@ import React from 'react';
 import { withStyles } from '@material-ui/styles';
 import {Link} from 'react-router-dom';
 
-import SpreadMenu from './SpreadMenu';
+/* import SpreadMenu from './SpreadMenu'; */
 import SidebarMenu from './SidebarMenu';
 
 const styles = {
@@ -85,7 +85,7 @@ const TitleRow = ({servicesClickHandler, contactClickHandler, logoClickedHandler
         <>
             <div className={classes.titleRow}>
                 <Link
-                    to='/diagnoses'
+                    to='/about'
                     className={classes.title}
                 >
                     Dark Diagnosis

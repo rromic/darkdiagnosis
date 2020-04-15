@@ -58,14 +58,14 @@ const SidebarMenu = () => {
               <ListItemText disableTypography primary={'Home'} />
             </ListItem>
           </NavLink>
-          <NavLink to='/diagnoses' exact className={classes.link}
+          {/* <NavLink to='/diagnoses' exact className={classes.link}
             activeStyle={{ cursor: 'default', fontWeight: 'bold', }}
           >
             <ListItem className={classes.listItem}>
-              {/* <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon> */}
+              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
               <ListItemText disableTypography primary={'Gallery'} />
             </ListItem>
-          </NavLink>
+          </NavLink> */}
         </List>
       </Drawer>
     </>
