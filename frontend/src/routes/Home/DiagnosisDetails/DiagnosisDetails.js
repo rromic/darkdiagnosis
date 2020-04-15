@@ -27,7 +27,7 @@ const useStyles = makeStyles(theme => {
                 margin: '0rem',
             },
             description: {
-                marginTop: '1rem',
+                marginTop: '0rem',
             },
             outer: {
                 marginTop: '1rem',
