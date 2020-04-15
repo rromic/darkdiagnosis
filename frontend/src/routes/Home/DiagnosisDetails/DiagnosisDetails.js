@@ -14,6 +14,7 @@ const useStyles = makeStyles(theme => {
         imageWrapper: {
             width: '100%',
             margin: '0.5rem',
+            height: 'fit-content',
         },
         description: {
             margin: '1rem',
@@ -49,7 +50,7 @@ const DiagnosisDetails = ({ match }) => {
     const descriptionComponent = (
         <div className={classes.description}>
             <div style={{ fontWeight: 'bold', fontSize: '1.4rem', margin: '0.5rem 0rem' }}>{diagnosisData.name}</div>
-            <div>{diagnosisData.description}</div>
+            <div style={{ whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}>{diagnosisData.description}</div>
             <div style={{ margin: '2rem 0rem 1rem', fontWeight: 'bold', fontSize: '1.2rem' }}>Links</div>
             {diagnosisData.links.map((link, index) => (
                 <a
