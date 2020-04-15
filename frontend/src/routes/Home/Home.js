@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect, } from 'react';
 
 import TitleRow from './TitleRow/TitleRow';
 import { HomeRouter } from './HomeRouter';
 /* import backgroundPattern from './backgroundPattern.jpg'; */
 import { makeStyles } from '@material-ui/styles';
+import { useLocation } from 'react-router-dom';
 
 const useStyles = makeStyles(theme => {
 
@@ -16,7 +17,7 @@ const useStyles = makeStyles(theme => {
             width: '100%',
             /* display: 'flex',
             flexDirection: 'column', */
-        },   
+        },
         [theme.breakpoints.up('sm')/* '@media (min-width: 600px)' */]: {
             /* outer: {
                 marginTop: '5rem',
@@ -27,6 +28,12 @@ const useStyles = makeStyles(theme => {
 
 const Home = () => {
     const classes = useStyles();
+
+    let location = useLocation();
+    useEffect(() => {
+        console.log('scroll to top:', document.getElementsByTagName('body')[0]);
+        document.getElementsByTagName('html')[0].scrollTop = 0;
+    }, [location]);
 
     return (
         <div className={classes.outer}>
