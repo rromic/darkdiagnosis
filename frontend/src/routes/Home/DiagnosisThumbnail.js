@@ -6,15 +6,10 @@ import { useDispatch } from 'react-redux';
 const useStyles = makeStyles(theme => {
   return ({
     outer: {
-      margin: '0.5rem 0.41% 0.5rem',
-      width: '19%',
     },
     inner: {
     },
     [theme.breakpoints.up('sm')/* '@media (min-width: 600px)' */]: {
-      mini: {
-        width: '60px',
-      },
     },
     [theme.breakpoints.up('md')/* '@media (min-width: 960px)' */]: {
       /* outer: {
@@ -25,16 +20,14 @@ const useStyles = makeStyles(theme => {
   });
 });
 
-const Diagnosis = ({ diagnosisData, mini }) => {
+const Diagnosis = ({ diagnosisData, style, }) => {
   const classes = useStyles();
   const dispatch = useDispatch();
 
-  if (diagnosisData === undefined) {
-    return (<div className={classes.outer + (mini ? ' ' + classes.mini : '')} />)
-  }
   return (
     <div
-      className={classes.outer + (mini ? ' ' + classes.mini : '')}
+      className={classes.outer}
+      style={style}
       onClick={
         () => { dispatch(push('/diagnoses/' + diagnosisData.id)); }
       }

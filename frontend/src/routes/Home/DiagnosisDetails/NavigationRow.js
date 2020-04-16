@@ -3,6 +3,10 @@ import { makeStyles } from '@material-ui/styles';
 import HomeIcon from '@material-ui/icons/Home';
 import { NavLink } from 'react-router-dom';
 import DiagnosisThumbnail from '../DiagnosisThumbnail';
+import ArrowLeftIcon from '@material-ui/icons/ArrowLeft';
+import ArrowRightIcon from '@material-ui/icons/ArrowRight';
+import { useDispatch } from 'react-redux';
+import { push } from 'connected-react-router';
 
 const useStyles = makeStyles(theme => {
   return ({
@@ -11,11 +15,17 @@ const useStyles = makeStyles(theme => {
       flexDirection: 'row',
       justifyContent: 'space-between',
       alignItems: 'center',
-      margin: '0.5rem 1rem 1rem 1rem',
+      margin: '0.5rem -0.5rem 1rem',
+    },
+    navItem: {
+      display: 'flex',
+      alignItems: 'center',
+      width: '95px',
+      height: '60px',
     },
     [theme.breakpoints.up('sm')/* '@media (min-width: 600px)' */]: {
       outer: {
-        margin: '0.5rem 0rem 2rem',
+        margin: '0.5rem -1rem 2rem',
       },
     },
   });
@@ -24,12 +34,29 @@ const NavigationRow = ({ currentIndex, diagnosesData }) => {
   const classes = useStyles();
   const previousIndex = currentIndex - 1;
   const nextIndex = currentIndex + 1;
+  const dispatch = useDispatch();
 
   return (
     <div className={classes.outer}>
-      <DiagnosisThumbnail diagnosisData={diagnosesData[nextIndex]} mini={true} />
-      <NavLink to='/'><HomeIcon style={{ width: '2rem', height: '2rem' }} /></NavLink>
-      <DiagnosisThumbnail diagnosisData={diagnosesData[previousIndex]} mini={true} />
+      {nextIndex < diagnosesData.length - 1 ?
+        <div
+          className={classes.navItem}
+        >
+          <ArrowLeftIcon fontSize='large' style={{ cursor: 'pointer', }} onClick={() => { dispatch(push('/diagnoses/' + diagnosesData[nextIndex].id)); }} />
+          <DiagnosisThumbnail diagnosisData={diagnosesData[nextIndex]} style={{ transform: 'translateX(-5px)', }} />
+        </div>
+        : <div style={{ width: '95px', height: '60px', }} />
+      }
+      <NavLink to='/'><HomeIcon style={{ width: '2rem', height: '2rem', color: 'black', }} /></NavLink>
+      {previousIndex > 0 ?
+        <div
+          className={classes.navItem}
+        >
+          <DiagnosisThumbnail diagnosisData={diagnosesData[previousIndex]} style={{ transform: 'translateX(5px)', }} />
+          <ArrowRightIcon fontSize='large' style={{ cursor: 'pointer', }} onClick={() => { dispatch(push('/diagnoses/' + diagnosesData[previousIndex].id)); }} />
+        </div>
+        : <div style={{ width: '95px', height: '60px', }} />
+      }
     </div>
   );
 };

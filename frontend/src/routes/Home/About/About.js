@@ -18,6 +18,11 @@ const useStyles = makeStyles(theme => {
             padding: '0rem 1rem',
             margin: '1rem 0rem',
         },
+        gallery: {
+            display: 'flex',
+            flexDirection: 'row',
+            flexWrap: 'wrap',
+        },
         contactItems: {
             marginBottom: '0rem',
             display: 'flex',
@@ -62,17 +67,17 @@ const About = () => {
             </Grid>
 
             <Grid item xs={12} md={12} style={{ textAlign: 'center' }}>
-                <div style={{ marginTop: '0rem', marginBottom: '4rem' }}>
+                <div style={{ marginTop: '0rem', marginBottom: '3.5rem' }}>
                     <div style={{ fontSize: '1.4rem', marginBottom: '1.5rem', fontWeight: 'bold' }}>Gallery</div>
-                    <div
-                        style={{
-                            display: 'flex',
-                            flexDirection: 'row',
-                            flexWrap: 'wrap',
-                        }}
-                    >
+                    <div className={classes.gallery}>
                         {diagnosesData.map(diagnosisData => (
-                            <DiagnosisThumbnail key={diagnosisData.id} diagnosisData={diagnosisData} />
+                            <div style={{
+                                margin: '0.5rem 0.41% 0.5rem',
+                                width: '19%',
+                                display: 'flex',
+                            }}>
+                                <DiagnosisThumbnail key={diagnosisData.id} diagnosisData={diagnosisData} />
+                            </div>
                         ))}
                     </div>
                 </div>
