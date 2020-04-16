@@ -14,6 +14,7 @@ const useStyles = makeStyles(theme => {
         imageWrapper: {
             width: '100%',
             margin: '0.5rem',
+            marginTop: '0rem',
             height: 'fit-content',
         },
         description: {
