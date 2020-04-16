@@ -15,17 +15,21 @@ const useStyles = makeStyles(theme => {
       flexDirection: 'row',
       justifyContent: 'space-between',
       alignItems: 'center',
-      margin: '0.5rem -0.5rem 1rem',
+      margin: '0rem -0.5rem 1rem',
     },
     navItem: {
       display: 'flex',
       alignItems: 'center',
-      width: '95px',
-      height: '60px',
+      width: '75px',
+      height: '45px',
     },
     [theme.breakpoints.up('sm')/* '@media (min-width: 600px)' */]: {
       outer: {
         margin: '0.5rem -1rem 2rem',
+      },
+      navItem: {
+        width: '90px',
+        height: '55px',
       },
     },
   });
@@ -45,9 +49,9 @@ const NavigationRow = ({ currentIndex, diagnosesData }) => {
           <ArrowLeftIcon fontSize='large' style={{ cursor: 'pointer', }} onClick={() => { dispatch(push('/diagnoses/' + diagnosesData[nextIndex].id)); }} />
           <DiagnosisThumbnail diagnosisData={diagnosesData[nextIndex]} style={{ transform: 'translateX(-5px)', }} />
         </div>
-        : <div style={{ width: '95px', height: '60px', }} />
+        : <div className={classes.navItem} />
       }
-      <NavLink to='/'><HomeIcon style={{ width: '2rem', height: '2rem', color: 'black', }} /></NavLink>
+      <NavLink to='/'><HomeIcon style={{ width: '2rem', height: '2rem', color: 'black', marginTop: '5px', }} /></NavLink>
       {previousIndex >= 0 ?
         <div
           className={classes.navItem}
@@ -55,7 +59,7 @@ const NavigationRow = ({ currentIndex, diagnosesData }) => {
           <DiagnosisThumbnail diagnosisData={diagnosesData[previousIndex]} style={{ transform: 'translateX(5px)', }} />
           <ArrowRightIcon fontSize='large' style={{ cursor: 'pointer', }} onClick={() => { dispatch(push('/diagnoses/' + diagnosesData[previousIndex].id)); }} />
         </div>
-        : <div style={{ width: '95px', height: '60px', }} />
+        : <div className={classes.navItem} />
       }
     </div>
   );
