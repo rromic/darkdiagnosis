@@ -71,11 +71,14 @@ const About = () => {
                     <div style={{ fontSize: '1.4rem', marginBottom: '1.5rem', fontWeight: 'bold' }}>Gallery</div>
                     <div className={classes.gallery}>
                         {diagnosesData.map(diagnosisData => (
-                            <div style={{
-                                margin: '0.5rem 0.41% 0.5rem',
-                                width: '19%',
-                                display: 'flex',
-                            }}>
+                            <div 
+                                key={diagnosisData.id}
+                                style={{
+                                    margin: '0.5rem 0.41% 0.5rem',
+                                    width: '19%',
+                                    display: 'flex',
+                                }}
+                            >
                                 <DiagnosisThumbnail key={diagnosisData.id} diagnosisData={diagnosisData} />
                             </div>
                         ))}

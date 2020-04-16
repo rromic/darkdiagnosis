@@ -31,7 +31,7 @@ const Home = () => {
 
     let location = useLocation();
     useEffect(() => {
-        console.log('scroll to top:', document.getElementsByTagName('body')[0]);
+        /* console.log('scroll to top:', document.getElementsByTagName('body')[0]); */
         document.getElementsByTagName('html')[0].scrollTop = 0;
     }, [location]);
 
