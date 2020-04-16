@@ -38,7 +38,7 @@ const NavigationRow = ({ currentIndex, diagnosesData }) => {
 
   return (
     <div className={classes.outer}>
-      {nextIndex < diagnosesData.length - 1 ?
+      {nextIndex <= diagnosesData.length - 1 ?
         <div
           className={classes.navItem}
         >
@@ -48,7 +48,7 @@ const NavigationRow = ({ currentIndex, diagnosesData }) => {
         : <div style={{ width: '95px', height: '60px', }} />
       }
       <NavLink to='/'><HomeIcon style={{ width: '2rem', height: '2rem', color: 'black', }} /></NavLink>
-      {previousIndex > 0 ?
+      {previousIndex >= 0 ?
         <div
           className={classes.navItem}
         >
