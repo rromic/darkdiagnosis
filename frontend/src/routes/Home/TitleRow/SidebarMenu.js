@@ -50,7 +50,7 @@ const SidebarMenu = () => {
       >
         <List
         >
-          <NavLink to='/about' exact className={classes.link}
+          <NavLink to='/' exact className={classes.link}
             activeStyle={{ cursor: 'default', fontWeight: 'bold', }}
           >
             <ListItem className={classes.listItem}>

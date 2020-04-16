@@ -85,7 +85,7 @@ const TitleRow = ({servicesClickHandler, contactClickHandler, logoClickedHandler
         <>
             <div className={classes.titleRow}>
                 <Link
-                    to='/about'
+                    to='/'
                     className={classes.title}
                 >
                     Dark Diagnosis
