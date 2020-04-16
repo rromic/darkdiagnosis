@@ -20,13 +20,13 @@ const styles = {
         /* borderBottom: '1px solid black', */
         color: '#FFFFFE',
         opacity: '0.95',
-        height: '5rem',
+        height: '4.3rem',
         boxSizing: 'border-box',
         zIndex: 100,
     },
     spacer: {
         width: '100%',
-        height: '5rem',
+        height: '4.3rem',
         backgroundColor: '#000',
         //backgroundColor: '#a48500',
     }, 
@@ -45,7 +45,7 @@ const styles = {
     },
     title: {
         color: '#FFFFFE',
-        fontSize: '1.7rem',
+        fontSize: '1.5rem',
         fontWeight: 'bold',
         cursor: 'pointer',
         textDecoration: 'none',
