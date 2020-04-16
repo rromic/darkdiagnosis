@@ -27,9 +27,9 @@ const NavigationRow = ({ currentIndex, diagnosesData }) => {
 
   return (
     <div className={classes.outer}>
-      <DiagnosisThumbnail diagnosisData={diagnosesData[previousIndex]} mini={true} />
-      <NavLink to='/'><HomeIcon style={{ width: '2rem', height: '2rem' }} /></NavLink>
       <DiagnosisThumbnail diagnosisData={diagnosesData[nextIndex]} mini={true} />
+      <NavLink to='/'><HomeIcon style={{ width: '2rem', height: '2rem' }} /></NavLink>
+      <DiagnosisThumbnail diagnosisData={diagnosesData[previousIndex]} mini={true} />
     </div>
   );
 };
