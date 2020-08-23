@@ -1,5 +1,5 @@
 import React from 'react';
-import config from 'Config';
+import config from 'src/utils/node_modules/Config';
 
 // import CustomSpinner from 'Components/CustomSpinner/CustomSpinner';
 
