@@ -1,20 +1,9 @@
-//const { initializeDatabaseInterface, shutdownDatabaseInterface } = require('./dal/db');
+import express from 'express';
+import data from './diagnosesData/data.js';
+const app = express();
 
-const {configureKoa} = require('./server/koa');
+app.get('/', function (req, res) {
+  res.json(data);
+})
 
-const http = require('http');
-
-const main = async () => {
-
-    /* await initializeDatabaseInterface();
-    console.log('- Database interface initialized'); */
-
-    const koaConfiguration = await configureKoa();
-    console.log('- Koa server configured');
-    const server = http.createServer(koaConfiguration.callback());
-    server.listen(process.env.PORT || 80);
-    console.log('- Server started');
-};
-
-
-main();
+app.listen(3000);
