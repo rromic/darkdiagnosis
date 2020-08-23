@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/styles';
 import { useSelector } from 'react-redux';
 import Grid from '@material-ui/core/Grid';
 import NavigationRow from './NavigationRow';
+import config from 'config/default';
 
 
 const useStyles = makeStyles(theme => {
@@ -91,7 +92,13 @@ const DiagnosisDetails = ({ match }) => {
             <Grid container className={classes.outer}>
                 <div className={classes.descriptionTitleXs}>{diagnosisData.name}</div>
                 <Grid item xs={12} sm={6} className={classes.imageWrapper}>
-                    <img alt={diagnosisData.name} src={diagnosisData.imageUrl} width='100%' height='100%' style={{ borderRadius: '5%' }} />
+                    <img
+                      alt={diagnosisData.name}
+                      src={config.api + 'images/' + diagnosisData.imageUrl}
+                      width='100%'
+                      height='100%'
+                      style={{ borderRadius: '5%' }}
+                    />
                 </Grid>
                 <Grid item xs={12} sm={6} style={{ background: 'white', borderRadius: '30px' }}>
                     {descriptionComponent}

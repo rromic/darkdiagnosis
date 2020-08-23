@@ -29,10 +29,10 @@ const SidebarMenu = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   /////////hack to trigger sidebare close on route change///////////
-  const route = useSelector(state => state.router.location.pathname);
+  /* const route = useSelector(state => state.router.location.pathname);
   useEffect(() => {
     setSidebarOpen(false);
-  }, [route]);
+  }, [route]); */
   /////////////////////////////////////////////////////////////////
 
   return (

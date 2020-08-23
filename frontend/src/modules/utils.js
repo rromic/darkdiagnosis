@@ -1,5 +1,5 @@
 
-import config from '../config';
+import config from 'config';
 
 /* const fetchRelative = async (path, options = {}, queryParams) => {
 
@@ -21,7 +21,7 @@ import config from '../config';
 
 const fetchRelative = async (path, options = {}, queryParams) => {
 
-  const url = new URL('http://localhost:3000/' + path);
+  const url = new URL('http://localhost:2000/' + path);
   url.search = new URLSearchParams(queryParams);
 
   /* const token = localStorage.getItem('token');

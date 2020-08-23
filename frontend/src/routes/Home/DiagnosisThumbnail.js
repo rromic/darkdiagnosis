@@ -2,6 +2,8 @@ import React from 'react';
 import { makeStyles } from '@material-ui/styles';
 import { push } from 'connected-react-router';
 import { useDispatch } from 'react-redux';
+import config from 'config/default';
+import { NavLink } from 'react-router-dom';
 
 const useStyles = makeStyles(theme => {
   return ({
@@ -22,15 +24,12 @@ const useStyles = makeStyles(theme => {
 
 const Diagnosis = ({ diagnosisData, style, }) => {
   const classes = useStyles();
-  const dispatch = useDispatch();
 
   return (
-    <div
+    <NavLink
       className={classes.outer}
       style={style}
-      onClick={
-        () => { dispatch(push('/diagnoses/' + diagnosisData.id)); }
-      }
+      to={'/diagnoses/' + diagnosisData.id}
     >
       <div
         className={classes.inner}
@@ -39,12 +38,12 @@ const Diagnosis = ({ diagnosisData, style, }) => {
         <img
           alt={diagnosisData.name}
           title={diagnosisData.name}
-          src={diagnosisData.imageUrl}
+          src={config.api + 'images/' + diagnosisData.imageUrl}
           width='100%'
           height='100%'
           style={{ borderRadius: '10px' }} />
       </div>
-    </div>
+    </NavLink>
   );
 };
 

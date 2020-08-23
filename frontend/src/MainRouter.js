@@ -1,20 +1,26 @@
 import React, { useEffect } from 'react';
-import { Route, Switch } from 'react-router-dom';
-import { fetchRelative } from 'Modules/utils.js';
+import { Route, Switch, BrowserRouter } from 'react-router-dom';
+import { fetchRelative } from 'modules/utils';
 import Home from './routes/Home/Home';
+import { useDispatch } from 'react-redux';
 /* import { noRouteRenderer } from './routes/NoRoute/noRouteRenderer'; */
 
 const MainRouter = () => {
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    fetchRelative('data');
-  }, []);
+    fetchRelative('data').then(data => {
+      dispatch({ type: 'diagnosesData/loaded', data });
+    });
+  }, [dispatch]);
 
   return (
-    <Switch>
-      <Route path="/" component={Home} />
-      {/* <Route component={noRouteRenderer} /> */}
-    </Switch>
+    <BrowserRouter>
+      <Switch>
+        <Route path="/" component={Home} />
+        {/* <Route component={noRouteRenderer} /> */}
+      </Switch>
+    </BrowserRouter>
   );
 };
 
