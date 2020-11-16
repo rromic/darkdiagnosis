@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => {
       flexDirection: 'row',
       justifyContent: 'space-between',
       alignItems: 'center',
-      margin: '0rem -0.5rem 1rem',
+      margin: '0.3rem -0.5rem 1rem',
     },
     navItem: {
       display: 'flex',

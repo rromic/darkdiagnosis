@@ -9,8 +9,6 @@ import {history} from './modules/store';
 
 import MainRouter from './MainRouter';
 
-import './style/globalStyle.css';
-
 import { ThemeProvider } from '@material-ui/core/styles';
 import { createMuiTheme } from '@material-ui/core/styles';
 
