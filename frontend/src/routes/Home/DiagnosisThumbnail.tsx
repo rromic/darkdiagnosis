@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => {
   };
 });
 
-const Diagnosis = ({ diagnosisData, style }: {diagnosisData: DiagnosisData, style?: any}) => {
+const DiagnosisThumbnail = ({ diagnosisData, style }: {diagnosisData: DiagnosisData, style?: React.CSSProperties}) => {
   const classes = useStyles();
   const dispatch = useDispatch();
 
@@ -52,4 +52,4 @@ const Diagnosis = ({ diagnosisData, style }: {diagnosisData: DiagnosisData, styl
   );
 };
 
-export default Diagnosis;
+export default DiagnosisThumbnail;
