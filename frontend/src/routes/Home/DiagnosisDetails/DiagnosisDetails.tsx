@@ -3,6 +3,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import { useSelector } from 'react-redux';
 import Grid from '@material-ui/core/Grid';
 import NavigationRow from './NavigationRow';
+import { RootState } from 'src/modules/store';
+import { match, } from 'react-router-dom';
 
 
 const useStyles = makeStyles(theme => {
@@ -55,10 +57,11 @@ const useStyles = makeStyles(theme => {
     });
 });
 
-const DiagnosisDetails = ({ match }) => {
+// TODO check match typing
+const DiagnosisDetails = ({ match }: {match: match<{diagnosisId: string}>}) => {
     const classes = useStyles();
     const diagnosisId = match.params.diagnosisId;
-    const diagnosesData = useSelector(state => state.diagnosesData);
+    const diagnosesData = useSelector((state: RootState) => state.diagnosesData);
     const indexOfDiagnosis = diagnosesData.findIndex(diagnosis => diagnosis.id === diagnosisId);
     const diagnosisData = diagnosesData[indexOfDiagnosis];
 

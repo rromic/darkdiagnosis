@@ -19,7 +19,15 @@ import parryRomberg from './parryRomberg.jpg';
 import scleroderma from './scleroderma.jpg';
 import covid from './covid.jpg';
 
-const diagnosesData = [
+export interface DiagnosisData {
+    id: string;
+    name: string;
+    description: string;
+    imageUrl: string;
+    links: string[];
+};
+
+const diagnosesData: DiagnosisData[] = [
     {
         id: 'COVID-19',
         name: 'COVID-19',

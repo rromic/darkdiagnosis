@@ -7,6 +7,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import { makeStyles } from '@material-ui/core/styles';
+import { RootState } from 'src/modules/store';
 
 const useStyles = makeStyles({
   link: {
@@ -29,7 +30,7 @@ const SidebarMenu = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   /////////hack to trigger sidebare close on route change///////////
-  const route = useSelector(state => state.router.location.pathname);
+  const route = useSelector((state: RootState) => state.router.location.pathname);
   useEffect(() => {
     setSidebarOpen(false);
   }, [route]);

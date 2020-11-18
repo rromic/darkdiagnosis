@@ -1,4 +1,4 @@
-import diagnosesData from './diagnosesData/diagnosesData';
+import diagnosesData from './diagnosesData';
 
 const diagnosesReducer = (state = diagnosesData, action: any) => {
     switch (action.type) {
