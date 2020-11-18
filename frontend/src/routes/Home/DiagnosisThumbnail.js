@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => {
   });
 });
 
-const Diagnosis = ({ diagnosisData, style, }) => {
+const Diagnosis = ({ diagnosisData, style = undefined, }) => {
   const classes = useStyles();
   const dispatch = useDispatch();
 

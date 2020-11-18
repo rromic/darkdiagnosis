@@ -6,6 +6,7 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import { useSelector, } from 'react-redux';
 import DiagnosisThumbnail from '../DiagnosisThumbnail';
+import { RootState } from 'src/modules/store';
 
 const useStyles = makeStyles(theme => {
     return ({
@@ -41,7 +42,7 @@ const useStyles = makeStyles(theme => {
 
 const About = () => {
     const classes = useStyles();
-    const diagnosesData = useSelector(state => state.diagnosesData);
+    const diagnosesData = useSelector((state: RootState) => state.diagnosesData);
 
     return (
         <Grid container className={classes.outer}>
@@ -79,7 +80,7 @@ const About = () => {
                                     display: 'flex',
                                 }}
                             >
-                                <DiagnosisThumbnail key={diagnosisData.id} diagnosisData={diagnosisData} />
+                                <DiagnosisThumbnail diagnosisData={diagnosisData} />
                             </div>
                         ))}
                     </div>
