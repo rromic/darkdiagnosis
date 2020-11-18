@@ -6,23 +6,23 @@ import Home from './routes/Home/Home';
 /* import { noRouteRenderer } from './routes/NoRoute/noRouteRenderer'; */
 
 const useStyles = makeStyles({
-    '@global': {
-        body: {
-            fontFamily: 'Roboto, sans-serif',
-            margin: '0px',
-        },
+  '@global': {
+    body: {
+      fontFamily: 'Roboto, sans-serif',
+      margin: '0px',
     },
+  },
 });
 
 const MainRouter = () => {
-    useStyles();
+  useStyles();
 
-    return (
-        <Switch>
-            <Route path="/" component={Home} />
-            {/* <Route component={noRouteRenderer} /> */}
-        </Switch>
-    );
+  return (
+    <Switch>
+      <Route path="/" component={Home} />
+      {/* <Route component={noRouteRenderer} /> */}
+    </Switch>
+  );
 };
 
 export default MainRouter;

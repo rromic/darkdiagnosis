@@ -92,7 +92,7 @@ const TitleRow = (
           className={classes.title}
         >
           Dark Diagnosis
-                </Link>
+        </Link>
 
         {/* <div className={classes.mdMenu}>
                     <SpreadMenu />

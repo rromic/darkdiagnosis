@@ -154,7 +154,7 @@ There are both cases where the extra finger can be independently controlled, and
       'https://www.ncbi.nlm.nih.gov/pubmed/27194607',
       'https://www.ncbi.nlm.nih.gov/pubmed/9526156',
 
-            /* x-ray photo:  */'https://en.m.wikipedia.org/wiki/Polydactyly',
+      /* x-ray photo:  */'https://en.m.wikipedia.org/wiki/Polydactyly',
     ]
   },
   {
