@@ -2,7 +2,6 @@ import React, { useEffect, } from 'react';
 
 import TitleRow from './TitleRow/TitleRow';
 import HomeRouter from './HomeRouter';
-/* import backgroundPattern from './backgroundPattern.jpg'; */
 import { makeStyles } from '@material-ui/core/styles';
 import { useLocation } from 'react-router-dom';
 
@@ -10,13 +9,10 @@ const useStyles = makeStyles(theme => {
 
   return ({
     outer: {
-      /* backgroundImage: `url(${backgroundPattern})`, */
       backgroundSize: '350px',
       minHeight: '100%',
       position: 'absolute',
       width: '100%',
-      /* display: 'flex',
-      flexDirection: 'column', */
     },
     [theme.breakpoints.up('sm')/* '@media (min-width: 600px)' */]: {
       /* outer: {
