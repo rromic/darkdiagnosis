@@ -6,13 +6,13 @@ import { AnyAction, configureStore, Reducer } from '@reduxjs/toolkit';
 const history = createBrowserHistory();
 
 const reducersArray = {
-    router: connectRouter(history) as Reducer<RouterState<unknown>, AnyAction>,
-    diagnosesData: diagnosesReducer,
+  router: connectRouter(history) as Reducer<RouterState<unknown>, AnyAction>,
+  diagnosesData: diagnosesReducer,
 };
 
 const store = configureStore({
-    reducer: reducersArray,
-    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(routerMiddleware(history)),
+  reducer: reducersArray,
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(routerMiddleware(history)),
 });
 
 export type RootState = ReturnType<typeof store.getState>;

@@ -6,19 +6,19 @@ let config;
 
 
 if (!config) {
-    console.log('SETTING CONFIG TO:', process.env.NODE_ENV);
+  console.log('SETTING CONFIG TO:', process.env.NODE_ENV);
 
-    switch (process.env.NODE_ENV) {
-        case 'development':
-            config = Object.assign(defaultConfig, development);
-            break;
-        case 'production':
-            config = Object.assign(defaultConfig, production);
-            break;
-        default:
-            config = {};
-            break;
-    }
+  switch (process.env.NODE_ENV) {
+    case 'development':
+      config = Object.assign(defaultConfig, development);
+      break;
+    case 'production':
+      config = Object.assign(defaultConfig, production);
+      break;
+    default:
+      config = {};
+      break;
+  }
 }
 
 

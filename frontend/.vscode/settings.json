@@ -1,0 +1,26 @@
+{
+  // "cucumberautocomplete.steps": [
+  //   "src/__tests__/features/step_definitions/*.js",
+  //   // "node_modules/qa-lib/src/step_definitions/*.js"
+  // ],
+  // "cucumberautocomplete.syncfeatures": "src/__tests__/features/*feature",
+  // "cucumberautocomplete.strictGherkinCompletion": true,
+  // "cucumberautocomplete.strictGherkinValidation": true,
+  // "cucumberautocomplete.smartSnippets": true,
+  // "cucumberautocomplete.stepsInvariants": true,
+  "eslint.format.enable": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "editor.detectIndentation": false,
+  "editor.tabSize": 2,
+}

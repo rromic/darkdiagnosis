@@ -11,6 +11,6 @@ module.exports = {
         argsIgnorePattern: "^_",
       },
     ],
-    "indent": ["warn", 2],
+    "indent": ["warn", 2, { SwitchCase: 1 }],
   }
 };
