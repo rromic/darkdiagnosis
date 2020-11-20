@@ -8,7 +8,6 @@ import Home from './routes/Home/Home';
 const useStyles = makeStyles({
   '@global': {
     body: {
-      fontFamily: 'Roboto, sans-serif',
       margin: '0px',
     },
   },

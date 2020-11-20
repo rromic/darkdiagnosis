@@ -1,15 +1,16 @@
 import React from 'react';
-import { makeStyles, } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
+import cx from 'classnames';
 
 /* import SpreadMenu from './SpreadMenu'; */
 import SidebarMenu from './SidebarMenu';
 
 const useStyles = makeStyles({
   titleRow: {
-    position: 'fixed',
     top: '0rem',
-    //backgroundColor: '#a48500',
+    flexShrink: 0,
+    flexGrow: 0,
     backgroundColor: '#000',
     width: '100%',
     padding: '0rem 1.5rem 0rem 1.5rem',
@@ -41,8 +42,7 @@ const useStyles = makeStyles({
   mdMenu: {
     display: 'none',
   },
-  xsMenu: {
-  },
+  xsMenu: {},
   title: {
     color: '#FFFFFE',
     fontSize: '1.5rem',
@@ -70,7 +70,7 @@ const useStyles = makeStyles({
       display: 'flex',
       flexDirection: 'row',
       justifyContent: 'right',
-      alignItems: 'center'
+      alignItems: 'center',
     },
     /* xsMenu: {
         display: 'none',
@@ -78,19 +78,12 @@ const useStyles = makeStyles({
   },
 });
 
-
-const TitleRow = (
-  /* { servicesClickHandler, contactClickHandler, logoClickedHandler, currentRoute }*/
-) => {
+const TitleRow = () => {
   const classes = useStyles();
-
   return (
     <>
       <div className={classes.titleRow}>
-        <Link
-          to='/'
-          className={classes.title}
-        >
+        <Link to="/" className={classes.title}>
           Dark Diagnosis
         </Link>
 
@@ -103,7 +96,7 @@ const TitleRow = (
         </div>
       </div>
 
-      <div className={classes.spacer} />
+      {/* <div className={classes.spacer} /> */}
       {/* <div className={classes.image}>
                 <img src={woman} style={{width: '100%'}}/> 
             </div> */}
@@ -112,4 +105,3 @@ const TitleRow = (
 };
 
 export default TitleRow;
-

@@ -4,15 +4,12 @@ import { useSelector } from 'react-redux';
 import Grid from '@material-ui/core/Grid';
 import NavigationRow from './NavigationRow';
 import { RootState } from 'src/modules/store';
-import { match, } from 'react-router-dom';
+import { match } from 'react-router-dom';
 
-
-const useStyles = makeStyles(theme => {
-
+const useStyles = makeStyles((theme) => {
   /* console.log(theme); */
-  return ({
-    outer: {
-    },
+  return {
+    outer: {},
     imageWrapper: {
       width: '100%',
       margin: '0.5rem',
@@ -33,7 +30,7 @@ const useStyles = makeStyles(theme => {
     descriptionTitleSm: {
       display: 'none',
     },
-    [theme.breakpoints.up('sm')/* '@media (min-width: 600px)' */]: {
+    [theme.breakpoints.up('sm') /* '@media (min-width: 600px)' */]: {
       imageWrapper: {
         marginTop: '0rem',
         margin: '0rem',
@@ -45,7 +42,7 @@ const useStyles = makeStyles(theme => {
         display: 'initial',
         fontWeight: 'bold',
         fontSize: '1.4rem',
-        margin: '0.2rem 0rem 1rem', 
+        margin: '0.2rem 0rem 1rem',
       },
       descriptionTitleXs: {
         display: 'none',
@@ -54,33 +51,49 @@ const useStyles = makeStyles(theme => {
         marginTop: '1rem',
       },
     },
-  });
+  };
 });
 
 // TODO check match typing
-const DiagnosisDetails = ({ match }: {match: match<{diagnosisId: string}>}) => {
+const DiagnosisDetails = ({
+  match,
+}: {
+  match: match<{ diagnosisId: string }>;
+}) => {
   const classes = useStyles();
   const diagnosisId = match.params.diagnosisId;
   const diagnosesData = useSelector((state: RootState) => state.diagnosesData);
-  const indexOfDiagnosis = diagnosesData.findIndex(diagnosis => diagnosis.id === diagnosisId);
+  const indexOfDiagnosis = diagnosesData.findIndex(
+    (diagnosis) => diagnosis.id === diagnosisId
+  );
   const diagnosisData = diagnosesData[indexOfDiagnosis];
 
   if (diagnosisData === undefined) {
-    return (<div>This diagnosis does not exist :(</div>);
+    return <div>This diagnosis does not exist :(</div>;
   }
 
   const descriptionComponent = (
     <div className={classes.description}>
       <div className={classes.descriptionTitleSm}>{diagnosisData.name}</div>
-      <div style={{ whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}>{diagnosisData.description}</div>
-      <div style={{ margin: '2rem 0rem 1rem', fontWeight: 'bold', fontSize: '1.2rem' }}>Links</div>
+      <div style={{ whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}>
+        {diagnosisData.description}
+      </div>
+      <div
+        style={{
+          margin: '2rem 0rem 1rem',
+          fontWeight: 'bold',
+          fontSize: '1.2rem',
+        }}
+      >
+        Links
+      </div>
       {diagnosisData.links.map((link, index) => (
         <a
           key={index}
-          style={{ marginBottom: '0.5rem', wordBreak: 'break-word', }}
+          style={{ marginBottom: '0.5rem', wordBreak: 'break-word' }}
           href={link}
-          target='_blank'
-          rel='noopener noreferrer'
+          target="_blank"
+          rel="noopener noreferrer"
         >
           {link}
         </a>
@@ -89,14 +102,33 @@ const DiagnosisDetails = ({ match }: {match: match<{diagnosisId: string}>}) => {
   );
 
   return (
-    <div>
-      <NavigationRow currentIndex={indexOfDiagnosis} diagnosesData={diagnosesData} />
+    <div
+      style={{
+        width: '95%',
+        maxWidth: '1270px',
+      }}
+    >
+      <NavigationRow
+        currentIndex={indexOfDiagnosis}
+        diagnosesData={diagnosesData}
+      />
       <Grid container className={classes.outer}>
         <div className={classes.descriptionTitleXs}>{diagnosisData.name}</div>
         <Grid item xs={12} sm={6} className={classes.imageWrapper}>
-          <img alt={diagnosisData.name} src={diagnosisData.imageUrl} width='100%' height='100%' style={{ borderRadius: '5%' }} />
+          <img
+            alt={diagnosisData.name}
+            src={diagnosisData.imageUrl}
+            width="100%"
+            height="100%"
+            style={{ borderRadius: '5%' }}
+          />
         </Grid>
-        <Grid item xs={12} sm={6} style={{ background: 'white', borderRadius: '30px' }}>
+        <Grid
+          item
+          xs={12}
+          sm={6}
+          style={{ background: 'white', borderRadius: '30px' }}
+        >
           {descriptionComponent}
         </Grid>
       </Grid>
