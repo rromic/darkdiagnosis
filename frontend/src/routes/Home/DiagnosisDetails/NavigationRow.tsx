@@ -1,36 +1,36 @@
-import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import HomeIcon from "@material-ui/icons/Home";
-import { NavLink } from "react-router-dom";
-import DiagnosisThumbnail from "../DiagnosisThumbnail";
-import ArrowLeftIcon from "@material-ui/icons/ArrowLeft";
-import ArrowRightIcon from "@material-ui/icons/ArrowRight";
-import { useDispatch } from "react-redux";
-import { push } from "connected-react-router";
-import { DiagnosisData } from "src/modules/diagnosesData";
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import HomeIcon from '@material-ui/icons/Home';
+import { NavLink } from 'react-router-dom';
+import DiagnosisThumbnail from '../DiagnosisThumbnail';
+import ArrowLeftIcon from '@material-ui/icons/ArrowLeft';
+import ArrowRightIcon from '@material-ui/icons/ArrowRight';
+import { useDispatch } from 'react-redux';
+import { push } from 'connected-react-router';
+import { DiagnosisData } from 'src/modules/diagnosesData';
 
 const useStyles = makeStyles((theme) => {
   return {
     outer: {
-      display: "flex",
-      flexDirection: "row",
-      justifyContent: "space-between",
-      alignItems: "center",
-      margin: "0.3rem -0.5rem 1rem",
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      margin: '0.3rem -0.5rem 1.5rem',
     },
     navItem: {
-      display: "flex",
-      alignItems: "center",
-      width: "75px",
-      height: "45px",
+      display: 'flex',
+      alignItems: 'center',
+      width: '75px',
+      height: '45px',
     },
-    [theme.breakpoints.up("sm") /* '@media (min-width: 600px)' */]: {
+    [theme.breakpoints.up('sm') /* '@media (min-width: 600px)' */]: {
       outer: {
-        margin: "0.5rem -1rem 2rem",
+        margin: '1rem -1rem 2rem',
       },
       navItem: {
-        width: "90px",
-        height: "55px",
+        width: '90px',
+        height: '55px',
       },
     },
   };
@@ -54,14 +54,14 @@ const NavigationRow = ({
         <div className={classes.navItem}>
           <ArrowLeftIcon
             fontSize="large"
-            style={{ cursor: "pointer" }}
+            style={{ cursor: 'pointer' }}
             onClick={() => {
-              dispatch(push("/diagnoses/" + diagnosesData[nextIndex].id));
+              dispatch(push('/diagnoses/' + diagnosesData[nextIndex].id));
             }}
           />
           <DiagnosisThumbnail
             diagnosisData={diagnosesData[nextIndex]}
-            style={{ transform: "translateX(-5px)" }}
+            style={{ transform: 'translateX(-5px)' }}
           />
         </div>
       ) : (
@@ -69,11 +69,9 @@ const NavigationRow = ({
       )}
       <NavLink to="/">
         <HomeIcon
+          className={classes.navItem}
           style={{
-            width: "2rem",
-            height: "2rem",
-            color: "black",
-            marginTop: "5px",
+            color: 'black',
           }}
         />
       </NavLink>
@@ -81,13 +79,13 @@ const NavigationRow = ({
         <div className={classes.navItem}>
           <DiagnosisThumbnail
             diagnosisData={diagnosesData[previousIndex]}
-            style={{ transform: "translateX(5px)" }}
+            style={{ transform: 'translateX(5px)' }}
           />
           <ArrowRightIcon
             fontSize="large"
-            style={{ cursor: "pointer" }}
+            style={{ cursor: 'pointer' }}
             onClick={() => {
-              dispatch(push("/diagnoses/" + diagnosesData[previousIndex].id));
+              dispatch(push('/diagnoses/' + diagnosesData[previousIndex].id));
             }}
           />
         </div>
