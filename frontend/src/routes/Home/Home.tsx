@@ -8,12 +8,12 @@ import { useLocation } from 'react-router-dom';
 const useStyles = makeStyles((theme) => {
   return {
     outer: {
-      overflow: 'hidden',
+      /* overflow: 'hidden', */
       position: 'absolute',
       display: 'flex',
       flexDirection: 'column',
-      width: '100vw',
-      height: '100vh',
+      left: '0px',
+      right: '0px',
       fontFamily: 'Roboto, sans-serif',
     },
     mainContent: {
@@ -21,12 +21,12 @@ const useStyles = makeStyles((theme) => {
       alignItems: 'center',
       width: '100%',
       flexDirection: 'column',
-      height: 'calc(100vh - 4.3rem)',
-      overflow: 'auto',
+      /* height: 'calc(100vh - 4.3rem)', */
+      /* overflow: 'auto', */
     },
     [theme.breakpoints.up('md') /* '@media (min-width: Xpx)' */]: {
       mainContent: {
-        height: 'calc(100vh - 6rem)',
+        /* height: 'calc(100vh - 6rem)', */
       },
     },
   };
@@ -43,6 +43,15 @@ const Home = () => {
       mainContentRef.current.scrollTop = 0;
     }
   }, [location]);
+
+  /* useEffect(() => {
+    if (mainContentRef.current) {
+      mainContentRef.current.addEventListener('scroll', function (event: Event) {
+        console.log(this.scrollTop);
+      });
+    }
+  }, []); 
+  */
 
   return (
     <div className={classes.outer} test-id="outer">

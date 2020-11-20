@@ -8,12 +8,11 @@ import SidebarMenu from './SidebarMenu';
 
 const useStyles = makeStyles({
   titleRow: {
-    top: '0rem',
-    flexShrink: 0,
-    flexGrow: 0,
+    /* position: 'fixed',
+    top: '0rem', */
     backgroundColor: '#000',
     width: '100%',
-    padding: '0rem 1.5rem 0rem 1.5rem',
+    padding: '0rem 1rem 0rem 1rem',
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -56,6 +55,7 @@ const useStyles = makeStyles({
   '@media (min-width: 960px)': {
     titleRow: {
       height: '6rem',
+      padding: '0rem 1.5rem 0rem 1.5rem',
     },
     title: {
       fontSize: '2.3rem',

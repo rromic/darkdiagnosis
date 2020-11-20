@@ -48,6 +48,7 @@ const SidebarMenu = () => {
         open={sidebarOpen}
         onClose={() => setSidebarOpen(false)}
         classes={{ paper: classes.sidebarPaper }}
+        /* ModalProps={{ disableScrollLock: true, onScroll: (ev) => {console.log('scroll'); ev.stopPropagation()} }} */
       >
         <List
         >
