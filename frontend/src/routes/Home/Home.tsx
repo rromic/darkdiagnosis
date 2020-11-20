@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 import TitleRow from './TitleRow/TitleRow';
 import HomeRouter from './HomeRouter';
@@ -34,17 +34,20 @@ const useStyles = makeStyles((theme) => {
 
 const Home = () => {
   const classes = useStyles();
+  const mainContentRef = useRef<HTMLDivElement>(null);
 
   let location = useLocation();
   useEffect(() => {
-    /* console.log('scroll to top:', document.getElementsByTagName('body')[0]); */
-    document.getElementsByTagName('html')[0].scrollTop = 0;
+    /* console.log('scroll to top'); */
+    if (mainContentRef.current) {
+      mainContentRef.current.scrollTop = 0;
+    }
   }, [location]);
 
   return (
     <div className={classes.outer} test-id="outer">
       <TitleRow />
-      <div className={classes.mainContent}>
+      <div className={classes.mainContent} ref={mainContentRef}>
         <HomeRouter />
       </div>
       {/* <div style={{width: '100%', backgroundColor: 'black', color: 'white'}}>Footer</div> */}
