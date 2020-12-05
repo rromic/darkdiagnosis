@@ -1,3 +1,5 @@
+import './modules/firebase';
+
 import ReactDOM from 'react-dom';
 import React from 'react';
 
@@ -25,6 +27,9 @@ const theme = createMuiTheme({
         } */
   },
 });
+
+ 
+
 
 ReactDOM.render(
   <Provider store={store}>

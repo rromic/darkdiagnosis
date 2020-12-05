@@ -1,21 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 
-import TitleRow from './TitleRow/TitleRow';
 import HomeRouter from './HomeRouter';
 import { makeStyles } from '@material-ui/core/styles';
 import { useLocation } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => {
   return {
-    outer: {
-      /* overflow: 'hidden', */
-      position: 'absolute',
-      display: 'flex',
-      flexDirection: 'column',
-      left: '0px',
-      right: '0px',
-      fontFamily: 'Roboto, sans-serif',
-    },
     mainContent: {
       display: 'flex',
       alignItems: 'center',
@@ -54,12 +44,8 @@ const Home = () => {
   */
 
   return (
-    <div className={classes.outer} test-id="outer">
-      <TitleRow />
-      <div className={classes.mainContent} ref={mainContentRef}>
-        <HomeRouter />
-      </div>
-      {/* <div style={{width: '100%', backgroundColor: 'black', color: 'white'}}>Footer</div> */}
+    <div className={classes.mainContent} ref={mainContentRef}>
+      <HomeRouter />
     </div>
   );
 };
