@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import firebase from 'firebase';
+import firebase from 'firebase/app';
 
 
 type Auth = { displayName: string | null, email: string | null } | null;
