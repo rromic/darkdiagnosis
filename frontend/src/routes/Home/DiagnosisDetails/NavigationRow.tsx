@@ -51,7 +51,7 @@ const NavigationRow = ({
   return (
     <div className={classes.outer}>
       {nextIndex <= diagnosesData.length - 1 ? (
-        <div className={classes.navItem}>
+        <div className={classes.navItem}  style={{ justifyContent: 'flex-start' }}>
           <ArrowLeftIcon
             fontSize="large"
             style={{ cursor: 'pointer' }}
@@ -60,6 +60,7 @@ const NavigationRow = ({
             }}
           />
           <DiagnosisThumbnail
+            key={nextIndex}
             diagnosisData={diagnosesData[nextIndex]}
             style={{ transform: 'translateX(-5px)' }}
           />
@@ -76,8 +77,9 @@ const NavigationRow = ({
         />
       </NavLink>
       {previousIndex >= 0 ? (
-        <div className={classes.navItem}>
+        <div className={classes.navItem} style={{ justifyContent: 'flex-end' }}>
           <DiagnosisThumbnail
+            key={nextIndex}
             diagnosisData={diagnosesData[previousIndex]}
             style={{ transform: 'translateX(5px)' }}
           />
