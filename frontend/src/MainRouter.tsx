@@ -36,7 +36,7 @@ const MainRouter = () => {
       <TitleRow />
       <Suspense fallback={<div>Loading...</div>}>
         <Switch>
-          <Route path='/admin' component={Admin} /> {/* LAZY ROUTE */}
+          <Route path='/admin' component={Admin} /> 
           <Route path='/' component={Home} />
           {/* <Route component={noRouteRenderer} /> */}
         </Switch>
