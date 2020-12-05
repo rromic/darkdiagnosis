@@ -117,7 +117,7 @@ const DiagnosisDetails = ({
         <Grid item xs={12} sm={6} className={classes.imageWrapper}>
           <img
             alt={diagnosisData.name}
-            src={diagnosisData.imageUrl}
+            src={'/fullImages/' + diagnosisData.imageUrl}
             width="100%"
             height="100%"
             style={{ borderRadius: '5%' }}
