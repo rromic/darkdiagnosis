@@ -50,7 +50,7 @@ If you suspect having COVID-19, please DO NOT visit your doctor, hospital or loc
     links: [
       'https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public',
       'https://zdravlje.gov.hr/UserDocsImages/2020%20CORONAVIRUS/plakat-za-javne-prostore-COVID.png',
-      'http://koronavirus.hr/',
+      'http://koronavirus.hr',
     ]
   },
   {
@@ -65,12 +65,12 @@ Patients with Asperger's, in addition to restricted and repetitive patterns of b
 It is important to identify Asperger syndrome as early as possible and start with multi-disciplinary treatment. Ignorance of Asperger syndrome can lead to failure in engagement with others socially, depression (especially by adolescents), stress, mood disorders and chronic frustration.
 
 Please check out & donate:
-https://udrugakorakdalje.hr/ 
+https://udrugakorakdalje.hr
 HR9723400091110079093 (PBZ) `,
     imageUrl: 'aspergerSyndrome.jpg',
     links: [
       'https://hrcak.srce.hr/82962',
-      'https://www.ncbi.nlm.nih.gov/m/pubmed/15124148/',
+      'https://www.ncbi.nlm.nih.gov/m/pubmed/15124148',
       'https://urn.nsk.hr/urn:nbn:hr:158:523571',
     ]
   },
@@ -82,7 +82,7 @@ HR9723400091110079093 (PBZ) `,
 Check more about Scleroderma in the previous post.`,
     imageUrl: 'parryRomberg.jpg',
     links: [
-      'https://www.ncbi.nlm.nih.gov/m/pubmed/30851754/',
+      'https://www.ncbi.nlm.nih.gov/m/pubmed/30851754',
       'https://www.sciencedirect.com/science/article/pii/S2214541918300245',
     ]
   },
@@ -101,8 +101,8 @@ More about turtles and sunflowers (Croatian Scleroderma Patients Association): h
     imageUrl: 'scleroderma.jpg',
     links: [
       'https://hrcak.srce.hr/188329',
-      'https://www.ncbi.nlm.nih.gov/m/pubmed/29781586/',
-      'https://www.ncbi.nlm.nih.gov/books/NBK537335/',
+      'https://www.ncbi.nlm.nih.gov/m/pubmed/29781586',
+      'https://www.ncbi.nlm.nih.gov/books/NBK537335',
     ]
   },
   {
@@ -115,7 +115,7 @@ Saccharomyces cervisiae is a yeast isolated in the GI system, most often causing
 Auto-brewery syndrome is successfully treated by avoiding carbohydrate-rich food, antifungal therapy and probiotics.`,
     imageUrl: 'autobrewery.jpg',
     links: [
-      'https://www.ncbi.nlm.nih.gov/books/NBK513346/',
+      'https://www.ncbi.nlm.nih.gov/books/NBK513346',
     ]
   },
   {
@@ -140,8 +140,8 @@ The delusion was first described in 1923 when French psychiatrist Joseph Capgras
 Fregoli syndrome is also a delusional misidentification syndrome where patients believe that different people are the same person who change appearances in order to trick them.`,
     imageUrl: 'fregoliSyndrome.jpg',
     links: [
-      'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3828996/',
-      'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2963468/',
+      'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3828996',
+      'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2963468',
     ]
   },
   {
@@ -170,7 +170,7 @@ Symptoms include hyperelastic skin, hypermobile joints, fragile blood vessels an
 Question for you: Why the zebra on the image?`,
     imageUrl: 'ehlers.jpg',
     links: [
-      'https://www.ncbi.nlm.nih.gov/m/pubmed/20847697/',
+      'https://www.ncbi.nlm.nih.gov/m/pubmed/20847697',
       'http://www.guinnessworldrecords.com/world-records/72387-stretchiest-skin',
     ]
   },
@@ -193,7 +193,7 @@ The most famous case of genu recurvatum was the circus performer, Ella Harper. B
 Today, most cases can be treated non-operatively, severe cases require surgical management.`,
     imageUrl: 'camelGirl.jpg',
     links: [
-      'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3058203/',
+      'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3058203',
       'https://hrcak.srce.hr/file/271737',
       'https://en.m.wikipedia.org/wiki/Ella_Harper',
     ]
@@ -216,8 +216,8 @@ Today, most cases can be treated non-operatively, severe cases require surgical 
 It is speculated that writer Lewis Carroll described his own symptoms in the book "Alice's Adventures in Wonderland", where the main character felt same perceptual alterations.`,
     imageUrl: 'aliceInWonderland.jpg',
     links: [
-      'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4909520/',
-      'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5223006/',
+      'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4909520',
+      'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5223006',
     ]
   },
   {
@@ -230,7 +230,7 @@ Vanishing twin syndrome occurs in 20-30% off all multifetal pregnancies and is o
 Which anomaly from previous posts can you notice here?`,
     imageUrl: 'vanishingTwin.jpg',
     links: [
-      'https://www.ncbi.nlm.nih.gov/m/pubmed/7170918/',
+      'https://www.ncbi.nlm.nih.gov/m/pubmed/7170918',
       'https://www.ncbi.nlm.nih.gov/m/pubmed/3524235/?i=3&from=/3047607/related',
     ]
   },
@@ -243,9 +243,9 @@ The phrase „65 Roses“ for Cystic Fibrosis was created by Richard Weiss, who 
     imageUrl: '65roses.jpg',
     links: [
       'https://hrcak.srce.hr/139011',
-      'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2137053/',
+      'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2137053',
       /* '65 Roses story'  */
-      'https://www.cff.org/About-Us/About-the-Cystic-Fibrosis-Foundation/The-65-Roses-Story/',
+      'https://www.cff.org/About-Us/About-the-Cystic-Fibrosis-Foundation/The-65-Roses-Story',
     ]
   },
   {
@@ -258,7 +258,7 @@ The disease consists of 13 types; type II is the most severe and lethal form.
 Because of multiple fractures, osteogenesis imperfecta can be mistaken for child abuse.`,
     imageUrl: 'brittleBoneDisease.jpg',
     links: [
-      'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5729682/'
+      'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5729682'
     ]
   },
   {
@@ -269,7 +269,7 @@ Because of multiple fractures, osteogenesis imperfecta can be mistaken for child
 According to psychiatric manuals, narcolepsy is defined as recurrent episodes of an irrepressible need to sleep, lapses into sleep, or napping occuring within the same day. This should happen at least three times per week, with a period of three consecutive months. One of three minor criteria should also be met: catalepsy (sudden and uncontrollable muscle paralisys with a loss of contact with the environment), hypocretin protein deficiency and REM latency. Narcolepsy is confirmed by polysomnography followed by a multiple sleep latency test.`,
     imageUrl: 'narcolepsy.jpg',
     links: [
-      'https://www.ncbi.nlm.nih.gov/books/NBK459236/',
+      'https://www.ncbi.nlm.nih.gov/books/NBK459236',
       'https://www.psychiatry.org/psychiatrists/practice/dsm',
     ]
   },
@@ -281,8 +281,8 @@ According to psychiatric manuals, narcolepsy is defined as recurrent episodes of
 The syndrome is characterized by the inability to ask for medical or social help, a pathological relationship to the body, society and objects. The last criterion may overlap with the hoarding disorder. The hoarding disorder is a subtype in obsessive compulsive spectrum disorders (OCD). It is characterized by difficulty to discard or part with possessions, usually objects. The result is the accumulation of objects and the congestion of living areas.`,
     imageUrl: 'diogenesSyndrome.jpg',
     links: [
-      'https://www.ncbi.nlm.nih.gov/m/pubmed/29145187/',
-      'https://www.ncbi.nlm.nih.gov/m/pubmed/28686560/',
+      'https://www.ncbi.nlm.nih.gov/m/pubmed/29145187',
+      'https://www.ncbi.nlm.nih.gov/m/pubmed/28686560',
     ]
   },
   {
@@ -297,7 +297,7 @@ Aside from David, there have been several more cases of ‘bubble babies’, how
 In the US, newborn screening programs have been widely accepted. Gene therapy, although still under clinical trial, could potentially be the cure to this disorder.`,
     imageUrl: 'bubbleBoy.jpg',
     links: [
-      'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1905779/',
+      'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1905779',
       'https://www.nejm.org/doi/10.1056/NEJMoa1815408',
       /* The story of David: */
       'https://primaryimmune.org/living-pi-explaining-pi-others/story-david',
@@ -315,7 +315,7 @@ IBAN: HR3923600001101481616 (Croatia only)
 http://krijesnica.hr/donacije (for international donations)`,
     imageUrl: 'bloodTypeChange.jpg',
     links: [
-      ' https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5242122/',
+      ' https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5242122',
       'https://pubs.acs.org/doi/abs/10.1021/ja5116088',
     ]
   },
