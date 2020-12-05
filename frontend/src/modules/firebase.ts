@@ -20,9 +20,11 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
+
 firebase.auth().onAuthStateChanged((user) => {
   console.log('on auth state changed', user);
-  store.dispatch(login(user));
+  const payload = user === null ? null : { displayName: user.displayName, email: user.email };
+  store.dispatch(login(payload));
 });
 
 export default firebase;

@@ -1,3 +1,4 @@
+/* eslint-disable quotes*/
 import _65roses from './65roses.jpg';
 import aliceInWonderland from './aliceInWonderland.jpg';
 import bloodTypeChange from './bloodTypeChange.jpg';

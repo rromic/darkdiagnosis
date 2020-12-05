@@ -1,11 +1,13 @@
 import { makeStyles } from '@material-ui/core';
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import Home from './routes/Home/Home';
 import TitleRow from './components/TitleRow/TitleRow';
-import Login from './routes/Login/Login';
 /* import { noRouteRenderer } from './routes/NoRoute/noRouteRenderer'; */
+
+const Admin = lazy(() => import('./routes/Admin/Admin'));
+
 
 const useStyles = makeStyles({
   '@global': {
@@ -25,17 +27,20 @@ const useStyles = makeStyles({
   }
 });
 
+
 const MainRouter = () => {
   const classes = useStyles();
 
   return (
     <div className={classes.outer} test-id='outer'>
       <TitleRow />
-      <Switch>
-        <Route path='/login' component={Login} />
-        <Route path='/' component={Home} />
-        {/* <Route component={noRouteRenderer} /> */}
-      </Switch>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Switch>
+          <Route path='/admin' component={Admin} /> {/* LAZY ROUTE */}
+          <Route path='/' component={Home} />
+          {/* <Route component={noRouteRenderer} /> */}
+        </Switch>
+      </Suspense>
     </div>
   );
 };

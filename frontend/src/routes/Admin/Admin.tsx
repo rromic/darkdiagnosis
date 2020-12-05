@@ -37,18 +37,18 @@ const Admin = () => {
   }, [user]);
 
   return (
-    <>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', margin: '1rem' }}>
       {user ?
         <>
-          <h1>Log out</h1>
-          <Button variant='outlined' onClick={() => {firebase.auth().signOut();}}>Log out</Button>
+          <div style={{ margin: '0.5rem', fontWeight: 'bold' }}>Signed in as:</div>
+          <div style={{ margin: '0rem' }}>{user.email}</div>
+          <Button  style={{ margin: '1rem' }} variant='outlined' onClick={() => {firebase.auth().signOut();}}>Log out</Button>
         </> :
-        <> 
-          <h1>Log in</h1>
+        <>
           <div ref={ref} />
         </>
       }
-    </>
+    </div>
   );
 };
 
