@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 const basicLinkStyle = {marginLeft: '2rem', fontSize: '1.5rem', color: '#FFFFFE', textDecoration: 'none', fontWeight: 'lighter'};
-const activeLinkStyle = {cursor: 'default', fontWeight: 'bold',};
+const activeLinkStyle = {cursor: 'default', fontWeight: 900,};
 
 const SpreadMenu= () => {
 

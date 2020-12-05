@@ -14,7 +14,7 @@ const SidebarMenuContent = () => {
                 to='/about'
                 exact={true}
                 style={{ margin: '1rem 3rem', color: '#FFFFFE', textDecoration: 'none', fontSize: '1.3rem', }}
-                activeStyle={{ cursor: 'default', fontWeight: 'bold', }}
+                activeStyle={{ cursor: 'default', fontWeight: 900, }}
             >
                 Main page
             </NavLink>
@@ -22,7 +22,7 @@ const SidebarMenuContent = () => {
                 to='/diagnoses'
                 exact={true}
                 style={{ margin: '1rem 3rem', color: '#FFFFFE', textDecoration: 'none', fontSize: '1.3rem', }}
-                activeStyle={{ cursor: 'default', fontWeight: 'bold', }}
+                activeStyle={{ cursor: 'default', fontWeight: 900, }}
             >
                 Diagnoses
             </NavLink>

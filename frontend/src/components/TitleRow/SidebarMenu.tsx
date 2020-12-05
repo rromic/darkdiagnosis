@@ -53,21 +53,21 @@ const SidebarMenu = () => {
         <List
         >
           <NavLink to='/' exact className={classes.link}
-            activeStyle={{ cursor: 'default', fontWeight: 'bold', }}
+            activeStyle={{ cursor: 'default', fontWeight: 900, }}
           >
             <ListItem className={classes.listItem}>
               <ListItemText disableTypography primary={'Home'} />
             </ListItem>
           </NavLink>
           <NavLink to='/admin' exact className={classes.link}
-            activeStyle={{ cursor: 'default', fontWeight: 'bold', }}
+            activeStyle={{ cursor: 'default', fontWeight: 900, }}
           >
             <ListItem className={classes.listItem}>
               <ListItemText disableTypography primary={'Admin'} />
             </ListItem>
           </NavLink>
           {/* <NavLink to='/diagnoses' exact className={classes.link}
-            activeStyle={{ cursor: 'default', fontWeight: 'bold', }}
+            activeStyle={{ cursor: 'default', fontWeight: 900, }}
           >
             <ListItem className={classes.listItem}>
               <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>

@@ -44,7 +44,7 @@ const useStyles = makeStyles({
   title: {
     color: '#FFFFFE',
     fontSize: '1.5rem',
-    fontWeight: 'bold',
+    fontWeight: 900,
     cursor: 'pointer',
     textDecoration: 'none',
   },

@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => {
       flexDirection: 'column',
     },
     descriptionTitleXs: {
-      fontWeight: 'bold',
+      fontWeight: 900,
       fontSize: '1.5rem',
       margin: '0rem auto 0.5rem',
     },
@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => {
       },
       descriptionTitleSm: {
         display: 'initial',
-        fontWeight: 'bold',
+        fontWeight: 900,
         fontSize: '1.4rem',
         margin: '0.2rem 0rem 1rem',
       },
@@ -81,7 +81,7 @@ const DiagnosisDetails = ({
       <div
         style={{
           margin: '2rem 0rem 1rem',
-          fontWeight: 'bold',
+          fontWeight: 900,
           fontSize: '1.2rem',
         }}
       >

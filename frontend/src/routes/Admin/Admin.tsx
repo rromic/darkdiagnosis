@@ -40,7 +40,7 @@ const Admin = () => {
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', margin: '1rem' }}>
       {user ?
         <>
-          <div style={{ margin: '0.5rem', fontWeight: 'bold' }}>Signed in as:</div>
+          <div style={{ margin: '0.5rem', fontWeight: 900 }}>Signed in as:</div>
           <div style={{ margin: '0rem' }}>{user.email}</div>
           <Button  style={{ margin: '1rem' }} variant='outlined' onClick={() => {firebase.auth().signOut();}}>Log out</Button>
         </> :

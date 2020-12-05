@@ -52,7 +52,7 @@ const About = () => {
             style={{
               fontSize: '1.4rem',
               marginBottom: '1.5rem',
-              fontWeight: 'bold',
+              fontWeight: 900,
             }}
           >
             About the project
@@ -83,7 +83,7 @@ const About = () => {
             style={{
               fontSize: '1.4rem',
               marginBottom: '1.5rem',
-              fontWeight: 'bold',
+              fontWeight: 900,
             }}
           >
             Gallery
@@ -111,7 +111,7 @@ const About = () => {
             style={{
               fontSize: '1.4rem',
               marginBottom: '1rem',
-              fontWeight: 'bold',
+              fontWeight: 900,
             }}
           >
             Contact us
@@ -145,7 +145,7 @@ const About = () => {
 
       {/* <Grid item xs={12} md={12} style={{textAlign: 'center'}}>
                 <div style={{marginBottom: '4rem'}}>
-                    <div style={{fontSize: '1.4rem', marginBottom: '1rem', fontWeight: 'bold'}}>Lokacija</div>
+                    <div style={{fontSize: '1.4rem', marginBottom: '1rem', fontWeight: 900}}>Lokacija</div>
                     <div style={{
                         display: 'flex',
                         flexDirection: 'column',
