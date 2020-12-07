@@ -39,9 +39,11 @@ const useStyles = makeStyles((theme) => {
 const NavigationRow = ({
   currentIndex,
   diagnosesData,
+  priority,
 }: {
   currentIndex: number;
   diagnosesData: DiagnosisData[];
+  priority: boolean,
 }) => {
   const classes = useStyles();
   const previousIndex = currentIndex - 1;
@@ -49,7 +51,7 @@ const NavigationRow = ({
   const dispatch = useDispatch();
 
   return (
-    <div className={classes.outer}>
+    <div className={classes.outer} style={{ position: priority ? undefined : 'absolute', top: priority ? undefined : '-1000px' }}>
       {nextIndex <= diagnosesData.length - 1 ? (
         <div className={classes.navItem}  style={{ justifyContent: 'flex-start' }}>
           <ArrowLeftIcon
@@ -63,6 +65,7 @@ const NavigationRow = ({
             key={nextIndex}
             diagnosisData={diagnosesData[nextIndex]}
             style={{ transform: 'translateX(-5px)' }}
+            priority={priority}
           />
         </div>
       ) : (
@@ -82,6 +85,7 @@ const NavigationRow = ({
             key={nextIndex}
             diagnosisData={diagnosesData[previousIndex]}
             style={{ transform: 'translateX(5px)' }}
+            priority={priority}
           />
           <ArrowRightIcon
             fontSize="large"

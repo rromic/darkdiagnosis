@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => {
   };
 });
 
-const DiagnosisThumbnail = ({ diagnosisData, style }: {diagnosisData: DiagnosisData, style?: React.CSSProperties}) => {
+const DiagnosisThumbnail = ({ diagnosisData, priority = false, style,  }: {diagnosisData: DiagnosisData, priority?: boolean, style?: React.CSSProperties}) => {
   const classes = useStyles();
   const dispatch = useDispatch();
 
@@ -40,6 +40,7 @@ const DiagnosisThumbnail = ({ diagnosisData, style }: {diagnosisData: DiagnosisD
         }}
       >
         <img
+          loading={priority ? 'eager' : 'lazy'}
           alt={diagnosisData.name}
           title={diagnosisData.name}
           src={'/thumbnails/' + diagnosisData.imageUrl}

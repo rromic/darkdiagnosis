@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { useSelector } from 'react-redux';
 import Grid from '@material-ui/core/Grid';
@@ -63,10 +63,13 @@ const DiagnosisDetails = ({
         maxWidth: '1270px',
       }}
     >
-      <NavigationRow
-        currentIndex={indexOfDiagnosis}
-        diagnosesData={diagnosesData}
-      />
+      {diagnosesData.map((diagnosisData, index) => 
+        <NavigationRow
+          currentIndex={index}
+          diagnosesData={diagnosesData}
+          priority={index === indexOfDiagnosis}
+        />
+      )}
       <Grid container className={classes.outer}>
         <div className={classes.titleXs}>{diagnosisData.name}</div>
         <Grid item xs={12} sm={6} className={classes.imageWrapper}>
@@ -74,13 +77,15 @@ const DiagnosisDetails = ({
             {diagnosesData.map((diagnosisData, index) => 
               <img
                 key={diagnosisData.name}
-                loading='lazy'
-                //ref={imageElementRef}
+                loading={index !== indexOfDiagnosis ? 'lazy' : 'eager'}
                 alt={diagnosisData.name}
                 src={'/fullImages/' + diagnosisData.imageUrl}
                 width="100%"
                 height="100%"
-                style={{ borderRadius: '5%', height: index !== indexOfDiagnosis ? '0px' : undefined, visibility: index !== indexOfDiagnosis ? 'hidden' : undefined }}
+                style={{
+                  borderRadius: '5%',
+                  height: index !== indexOfDiagnosis ?'0px' : undefined,
+                }}
               />
             )}
           </div>
