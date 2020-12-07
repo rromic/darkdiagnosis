@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useLayoutEffect, useRef } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { useSelector } from 'react-redux';
 import Grid from '@material-ui/core/Grid';
@@ -50,19 +50,6 @@ const DiagnosisDetails = ({
     (diagnosis) => diagnosis.id === diagnosisId
   );
 
-
-  /* const imageElementRef = useRef<HTMLImageElement>(null);
-  useLayoutEffect(() => {
-    if (indexOfDiagnosis !== -1 && imageElementRef.current?.complete) {
-      imageElementRef.current.src = '';
-      Promise.resolve().then(() => {
-        if (imageElementRef.current) {
-          imageElementRef.current.src = '/fullImages/' + diagnosesData[indexOfDiagnosis].imageUrl;
-        }
-      });
-    }
-  }, [indexOfDiagnosis, diagnosesData]); */
-
   if (indexOfDiagnosis === -1) {
     return <div>This diagnosis does not exist :(</div>;
   }
@@ -83,13 +70,20 @@ const DiagnosisDetails = ({
       <Grid container className={classes.outer}>
         <div className={classes.titleXs}>{diagnosisData.name}</div>
         <Grid item xs={12} sm={6} className={classes.imageWrapper}>
-          <img
-            alt={diagnosisData.name}
-            src={diagnosisData.imageUrl}
-            width="100%"
-            height="100%"
-            style={{ borderRadius: '5%' }}
-          />
+          <div style={{ display: 'flex' /* display: block takes some space for some reason */, flexDirection: 'column' }}>
+            {diagnosesData.map((diagnosisData, index) => 
+              <img
+                key={diagnosisData.name}
+                loading='lazy'
+                //ref={imageElementRef}
+                alt={diagnosisData.name}
+                src={'/fullImages/' + diagnosisData.imageUrl}
+                width="100%"
+                height="100%"
+                style={{ borderRadius: '5%', height: index !== indexOfDiagnosis ? '0px' : undefined, visibility: index !== indexOfDiagnosis ? 'hidden' : undefined }}
+              />
+            )}
+          </div>
         </Grid>
         <Grid
           item

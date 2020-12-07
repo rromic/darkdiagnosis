@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => {
   };
 });
 
-const DescriptionComponent = ({diagnosisData}: {diagnosisData: DiagnosisData}) => {
+const DescriptionComponent = ({ diagnosisData }: {diagnosisData: DiagnosisData}) => {
   const classes = useStyles();
 
   return (
