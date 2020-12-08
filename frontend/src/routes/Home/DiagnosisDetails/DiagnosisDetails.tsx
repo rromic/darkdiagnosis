@@ -65,6 +65,7 @@ const DiagnosisDetails = ({
     >
       {diagnosesData.map((diagnosisData, index) => 
         <NavigationRow
+          key={index}
           currentIndex={index}
           diagnosesData={diagnosesData}
           priority={index === indexOfDiagnosis}
@@ -73,7 +74,7 @@ const DiagnosisDetails = ({
       <Grid container className={classes.outer}>
         <div className={classes.titleXs}>{diagnosisData.name}</div>
         <Grid item xs={12} sm={6} className={classes.imageWrapper}>
-          <div style={{ display: 'flex' /* display: block takes some space for some reason */, flexDirection: 'column' }}>
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
             {diagnosesData.map((diagnosisData, index) => 
               <img
                 key={diagnosisData.name}
