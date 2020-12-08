@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 
 import HomeRouter from './HomeRouter';
 import { makeStyles } from '@material-ui/core/styles';
-import { useLocation } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => {
   return {
@@ -26,22 +26,14 @@ const Home = () => {
   const classes = useStyles();
   const mainContentRef = useRef<HTMLDivElement>(null);
 
-  let location = useLocation();
+  const location = useLocation();
+  const history = useHistory();
   useEffect(() => {
-    /* console.log('scroll to top'); */
-    if (mainContentRef.current) {
-      mainContentRef.current.scrollTop = 0;
+    if (document.scrollingElement && history.action === 'PUSH') {
+      document.scrollingElement.scrollTop = 0;
     }
-  }, [location]);
+  }, [location, history]);
 
-  /* useEffect(() => {
-    if (mainContentRef.current) {
-      mainContentRef.current.addEventListener('scroll', function (event: Event) {
-        console.log(this.scrollTop);
-      });
-    }
-  }, []); 
-  */
 
   return (
     <div className={classes.mainContent} ref={mainContentRef}>
