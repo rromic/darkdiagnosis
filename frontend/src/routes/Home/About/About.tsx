@@ -137,7 +137,9 @@ const About = () => {
             </div>
             <div className={classes.contactItems}>
               <MailOutlineIcon style={{ margin: '0.5rem' }} />
-              <span>darkdiagnosis1@gmail.com</span>
+              <a href="mailto:darkdiagnosis1@gmail.com">
+                darkdiagnosis1@gmail.com
+              </a>
             </div>
           </div>
         </div>
