@@ -46,6 +46,7 @@ const Admin = () => {
         </> :
         <>
           <div ref={ref} />
+          Welocme to google firebase hosting :)
         </>
       }
     </div>
