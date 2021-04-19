@@ -4,6 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 
 import Home from './routes/Home/Home';
 import TitleRow from './components/TitleRow/TitleRow';
+import SpinnerLoading from './components/Loading/SpinnerLoading';
 /* import { noRouteRenderer } from './routes/NoRoute/noRouteRenderer'; */
 
 const Admin = lazy(() => import('./routes/Admin/Admin'));
@@ -34,7 +35,7 @@ const MainRouter = () => {
   return (
     <div className={classes.outer} test-id='outer'>
       <TitleRow />
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<SpinnerLoading />}>
         <Switch>
           <Route path='/admin' component={Admin} /> 
           <Route path='/' component={Home} />
