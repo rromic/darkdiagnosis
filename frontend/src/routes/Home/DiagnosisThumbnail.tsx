@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { push } from 'connected-react-router';
 import { useDispatch } from 'react-redux';
-import { DiagnosisData } from 'src/modules/diagnosesData';
+import { DiagnosisData } from 'modules/diagnosesData';
 
 const useStyles = makeStyles((theme) => {
   return {

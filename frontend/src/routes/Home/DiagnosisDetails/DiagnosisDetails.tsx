@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { useSelector } from 'react-redux';
 import Grid from '@material-ui/core/Grid';
 import NavigationRow from './NavigationRow';
-import { RootState } from 'src/modules/store';
+import { RootState } from 'modules/store';
 import { match } from 'react-router-dom';
 import DescriptionComponent from './DescriptionComponent';
 

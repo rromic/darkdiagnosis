@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core';
 import React from 'react';
-import { DiagnosisData } from 'src/modules/diagnosesData';
+import { DiagnosisData } from 'modules/diagnosesData';
 
 const useStyles = makeStyles((theme) => {
   /* console.log(theme); */

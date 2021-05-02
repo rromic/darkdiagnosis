@@ -1,10 +1,10 @@
 import React, { useLayoutEffect, useRef } from 'react';
-import firebase from 'src/modules/firebase';
+import firebase from 'modules/firebase';
 import { auth } from 'firebaseui';
 import 'firebaseui/dist/firebaseui.css';
 import { Button } from '@material-ui/core';
 import { useSelector } from 'react-redux';
-import { RootState } from 'src/modules/store';
+import { RootState } from 'modules/store';
 
 // Configure FirebaseUI.
 const uiConfig = {

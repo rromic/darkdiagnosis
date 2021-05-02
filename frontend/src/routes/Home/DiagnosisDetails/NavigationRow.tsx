@@ -7,7 +7,7 @@ import ArrowLeftIcon from '@material-ui/icons/ArrowLeft';
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 import { useDispatch } from 'react-redux';
 import { push } from 'connected-react-router';
-import { DiagnosisData } from 'src/modules/diagnosesData';
+import { DiagnosisData } from 'modules/diagnosesData';
 
 const useStyles = makeStyles((theme) => {
   return {

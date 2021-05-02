@@ -6,7 +6,7 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import { useSelector } from 'react-redux';
 import DiagnosisThumbnail from '../DiagnosisThumbnail';
-import { RootState } from 'src/modules/store';
+import { RootState } from 'modules/store';
 
 const useStyles = makeStyles((theme) => {
   return {
